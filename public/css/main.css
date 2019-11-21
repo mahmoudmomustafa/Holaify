@@ -84,16 +84,14 @@ body {
     font-family: 'Raleway', sans-serif;
     background: white;
     color: #222B3A;
-    position: fixed;
-    transition: 500ms ease;
-    z-index: 2;
-    width: 100%;
+    transition: 500ms linear;
 }
 
 .nav-top{
-    background: transparent;
-    color: white;
-    box-shadow: none !important
+    transition: 500ms ease;
+    width: 100%;
+    position: fixed;
+    /* z-index: 2; */
 }
 .carousel{
     max-height: 600px;

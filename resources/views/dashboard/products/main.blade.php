@@ -3,24 +3,13 @@
 @section('content')
 <div class="content">
   {{-- header --}}
-  @component('componants.dashHeading')
-  @slot('title')
-  Products
-  @endslot
-  @slot('link')
-  /auth/products/create
-  @endslot
-  @slot('Add')
-  Add Products
-  @endslot
-  @endcomponent
+  <dash-head title="Products" link="/auth/products/create" add="Add Products"></dash-head>
   {{-- content --}}
   <div class="main">
     {{-- search --}}
     <div class="search w-100 py-3" id="search">
       {{-- view --}}
-      {{-- @include('layouts.dashboard.grid') --}}
-      <view-com></view-com>
+      @include('layouts.dashboard.grid')
       {{-- search --}}
       <div class="form-group mb-0">
         <div class="p-0 position-relative">
@@ -29,160 +18,9 @@
         </div>
       </div>
     </div>
-    {{-- grid --}}
-    <div class="row mx-0 my-2 justify-around" v-if="grid">
-      <div class="w-48 bg-white m-2 rounded shadow-md product">
-        <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-        <div class="p-2 body">
-          <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-          <div class="d-flex flex-column">
-            <div class="rate">
-              <input type="radio" name="stars" id="star-1" class="d-none" />
-              <input type="radio" name="stars" id="star-2" class="d-none" />
-              <input type="radio" name="stars" id="star-3" class="d-none" />
-              <input type="radio" name="stars" id="star-4" class="d-none" />
-              <input type="radio" name="stars" id="star-5" class="d-none" />
-              <section>
-                <label for="star-1">
-                  <i class="lni-star-filled"></i>
-                </label>
-                <label for="star-2">
-                  <i class="lni-star-filled"></i>
-                </label>
-                <label for="star-3"><i class="lni-star-filled"></i>
-                </label>
-                <label for="star-4"><i class="lni-star-filled"></i>
-                </label>
-                <label for="star-5"><i class="lni-star-filled"></i>
-                </label>
-              </section>
-            </div>
-            <div class="w-100 d-flex justify-between position-relative">
-              <div class="price font-bold text-sm mb-2">EGP 10.00</div>
-              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></i>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item edit" href="#">Edit</a>
-                <a class="dropdown-item delete" href="#">Delete</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-48 bg-white m-2 rounded shadow-md product">
-        <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-        <div class="p-2 body">
-          <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-          <div class="d-flex flex-column">
-            <div class="rate">
-              <input type="radio" name="stars" id="star-1" class="d-none" />
-              <input type="radio" name="stars" id="star-2" class="d-none" />
-              <input type="radio" name="stars" id="star-3" class="d-none" />
-              <input type="radio" name="stars" id="star-4" class="d-none" />
-              <input type="radio" name="stars" id="star-5" class="d-none" />
-              <section>
-                <label for="star-1">
-                  <i class="lni-star-filled"></i>
-                </label>
-                <label for="star-2">
-                  <i class="lni-star-filled"></i>
-                </label>
-                <label for="star-3"><i class="lni-star-filled"></i>
-                </label>
-                <label for="star-4"><i class="lni-star-filled"></i>
-                </label>
-                <label for="star-5"><i class="lni-star-filled"></i>
-                </label>
-              </section>
-            </div>
-            <div class="w-100 d-flex justify-between position-relative">
-              <div class="price font-bold text-sm mb-2">EGP 10.00</div>
-              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></i>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item edit" href="#">Edit</a>
-                <a class="dropdown-item delete" href="#">Delete</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-48 bg-white m-2 rounded shadow-md product">
-        <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-        <div class="p-2 body">
-          <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-          <div class="d-flex flex-column">
-            <div class="rate">
-              <input type="radio" name="stars" id="star-1" class="d-none" />
-              <input type="radio" name="stars" id="star-2" class="d-none" />
-              <input type="radio" name="stars" id="star-3" class="d-none" />
-              <input type="radio" name="stars" id="star-4" class="d-none" />
-              <input type="radio" name="stars" id="star-5" class="d-none" />
-              <section>
-                <label for="star-1">
-                  <i class="lni-star-filled"></i>
-                </label>
-                <label for="star-2">
-                  <i class="lni-star-filled"></i>
-                </label>
-                <label for="star-3"><i class="lni-star-filled"></i>
-                </label>
-                <label for="star-4"><i class="lni-star-filled"></i>
-                </label>
-                <label for="star-5"><i class="lni-star-filled"></i>
-                </label>
-              </section>
-            </div>
-            <div class="w-100 d-flex justify-between position-relative">
-              <div class="price font-bold text-sm mb-2">EGP 10.00</div>
-              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></i>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item edit" href="#">Edit</a>
-                <a class="dropdown-item delete" href="#">Delete</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-48 bg-white m-2 rounded shadow-md product">
-        <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-        <div class="p-2 body">
-          <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-          <div class="d-flex flex-column">
-            <div class="rate">
-              <input type="radio" name="stars" id="star-1" class="d-none" />
-              <input type="radio" name="stars" id="star-2" class="d-none" />
-              <input type="radio" name="stars" id="star-3" class="d-none" />
-              <input type="radio" name="stars" id="star-4" class="d-none" />
-              <input type="radio" name="stars" id="star-5" class="d-none" />
-              <section>
-                <label for="star-1">
-                  <i class="lni-star-filled"></i>
-                </label>
-                <label for="star-2">
-                  <i class="lni-star-filled"></i>
-                </label>
-                <label for="star-3"><i class="lni-star-filled"></i>
-                </label>
-                <label for="star-4"><i class="lni-star-filled"></i>
-                </label>
-                <label for="star-5"><i class="lni-star-filled"></i>
-                </label>
-              </section>
-            </div>
-            <div class="w-100 d-flex justify-between position-relative">
-              <div class="price font-bold text-sm mb-2">EGP 10.00</div>
-              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></i>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item edit" href="#">Edit</a>
-                <a class="dropdown-item delete" href="#">Delete</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    {{--view products in grid --}}
+    <div class="row mx-0 my-2 justify-center" v-if="grid">
+      {{-- products loop --}}
       <div class="w-48 bg-white m-2 rounded shadow-md product">
         <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
         <div class="p-2 body">
@@ -222,7 +60,7 @@
         </div>
       </div>
     </div>
-    {{-- table --}}
+    {{-- view products  in table --}}
     <table class="table table-hover" v-else>
       <thead>
         <tr>
@@ -238,6 +76,7 @@
           <th scope="col">Inventory</th>
           <th scope="col">Type</th>
           <th scope="col">Rate</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -276,6 +115,16 @@
               </section>
             </div>
           </td>
+          <td>
+            <div class="w-100 d-flex justify-end position-relative">
+              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit" href="#">Edit</a>
+                <a class="dropdown-item delete" href="#">Delete</a>
+              </div>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -283,19 +132,14 @@
 </div>
 @endsection
 @section('script')
-{{-- <script>
+<script>
   let app = new Vue({  
   el:".content",
   data:{
-    // grid:false,
     selectedAll:false,
     anySelect:false
   },
   methods:{
-    // grid view
-    view(){
-      this.grid = !this.grid;
-    },
     selectAll(){
       this.selectedAll = !this.selectedAll;
       if(this.selectedAll){
@@ -318,11 +162,8 @@
         $('input[name="selectAll"]').prop('checked', false);
         $('input[name="selectAll"]').prop('indeterminate', true);
       }
-    },
-    closeSession(){
-      $('.session').remove();
     }
   }
 })
-</script> --}}
+</script>
 @endsection

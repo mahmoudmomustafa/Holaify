@@ -2,7 +2,7 @@
 @section('title','Collection Name')
 @section('content')
 <div class="container">
-  <div class="collection-div">
+  <div class="collection-div p-4">
     <div class="header">
       Collection Name
     </div>
@@ -14,7 +14,7 @@
           <div class="img m-auto">
             <img src="/img/empty_state.png" width="500" alt="nothing-found">
           </div>
-          {{-- empty cart --}}
+          {{-- empty collection --}}
           <div class="text m-auto">
             <div class="p-3">Nothing found</div>
           </div>

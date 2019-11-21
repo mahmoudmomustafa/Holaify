@@ -3,17 +3,7 @@
 @section('content')
 <div class="content">
   {{-- header --}}
-  @component('componants.dashHeading')
-  @slot('title')
-  Collections
-  @endslot
-  @slot('link')
-  /auth/collections/create
-  @endslot
-  @slot('Add')
-  Add Collection
-  @endslot
-  @endcomponent
+  <dash-head title="Collections" link="/auth/collections/create" add="Add Collection"></dash-head>
   {{-- content --}}
   <div class="main">
     {{-- session message --}}
@@ -40,7 +30,7 @@
         </div>
       </div>
     </div>
-    {{-- grid --}}
+    {{-- view colections in grid --}}
     <div class="row mx-0 my-2 justify-around" v-if="grid">
       <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
         <div class="w-100 d-flex justify-end position-relative">
@@ -107,13 +97,14 @@
         </div>
       </div>
     </div>
-    {{-- table --}}
+    {{-- view collections in table --}}
     <table class="table table-hover" v-else>
       <thead>
         <tr>
           <th scope="col" width="15">#</th>
           <th scope="col">Collections</th>
           <th scope="col">no. of Products</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -126,6 +117,14 @@
           <td>1</td>
           <td><a href="#">Phones</a></td>
           <td>3 Product</td>
+          <td><div class="w-100 d-flex justify-end position-relative">
+              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit" href="#">Edit</a>
+                <a class="dropdown-item delete" href="#">Delete</a>
+              </div>
+            </div></td>
         </tr>
         {{-- @endforeach --}}
       </tbody>
@@ -139,15 +138,10 @@
   new Vue({  
       el:".content",
       data:{
-        grid:false,
         selectedAll:false,
         anySelect:false
       },
       methods:{
-        // grid view
-        view(){
-          this.grid = !this.grid;
-        },
         selectAll(){
           this.selectedAll = !this.selectedAll;
           if(this.selectedAll){
@@ -171,9 +165,6 @@
             $('input[name="selectAll"]').prop('checked', false);
           }
         },
-        closeSession(){
-          $('.session').remove();
-        }
       }
     })
 </script>

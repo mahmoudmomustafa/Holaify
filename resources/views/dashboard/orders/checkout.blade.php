@@ -3,11 +3,7 @@
 @section('content')
 <div class="content">
   {{-- header --}}
-  @component('componants.dashHeading')
-  @slot('title')
-  Abandoned Checkouts
-  @endslot
-  @endcomponent
+  <dash-head title="Abandoned Checkouts"></dash-head>
   {{-- content --}}
   <div class="main">
     {{-- session message --}}
@@ -46,58 +42,7 @@
     </div>
     {{-- checkout in grid --}}
     <div class="row mx-0 my-2 justify-around" v-if="grid">
-      <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
-        <div class="w-100 d-flex justify-end position-relative">
-          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"></i>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item edit" href="#">Edit</a>
-            <a class="dropdown-item delete" href="#">Delete</a>
-          </div>
-        </div>
-        <div class="text-center">
-          <div class="font-bold text-xl mb-2 title w-100">Customer Name</div>
-          <div class="d-flex flex-column">
-            <div class="font-bold text-sm mb-2 title">Product Item</div>
-            <div class="font-bold text-gray-700 text-xs mb-2 title">From 1:31 PM</div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
-        <div class="w-100 d-flex justify-end position-relative">
-          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"></i>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item edit" href="#">Edit</a>
-            <a class="dropdown-item delete" href="#">Delete</a>
-          </div>
-        </div>
-        <div class="text-center">
-          <div class="font-bold text-xl mb-2 title w-100">Customer Name</div>
-          <div class="d-flex flex-column">
-            <div class="font-bold text-sm mb-2 title">Product Item</div>
-            <div class="font-bold text-gray-700 text-xs mb-2 title">From 1:31 PM</div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
-        <div class="w-100 d-flex justify-end position-relative">
-          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"></i>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item edit" href="#">Edit</a>
-            <a class="dropdown-item delete" href="#">Delete</a>
-          </div>
-        </div>
-        <div class="text-center">
-          <div class="font-bold text-xl mb-2 title w-100">Customer Name</div>
-          <div class="d-flex flex-column">
-            <div class="font-bold text-sm mb-2 title">Product Item</div>
-            <div class="font-bold text-gray-700 text-xs mb-2 title">From 1:31 PM</div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
+      <div class="w-56 bg-white rounded-lg py-3 shadow px-4 order m-1">
         <div class="w-100 d-flex justify-end position-relative">
           <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false"></i>
@@ -128,36 +73,35 @@
           <th scope="col">Customer</th>
           <th scope="col">Order</th>
           <th scope="col">From</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
-        {{-- @foreach($checkouts as $checkout) --}}
         <tr>
-          {{-- <td>
-              <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" name="{{$checkout->id}}" id="{{$checkout->id}}">
-          <label class="custom-control-label" for="{{$cheakout->id}}"></label>
+          <td>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" @change="selected()" name="aband" id="">
+              <label class="custom-control-label" for=""></label>
+            </div>
+          </td>
+          <td><a href="#"> <img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
+                style="margin-right:8px">Mark</a></td>
+          <td>iphone7</td>
+          <td>3 Days</td>
+          <td>
+            <div class="w-100 d-flex justify-end position-relative">
+              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit" href="#">Edit</a>
+                <a class="dropdown-item delete" href="#">Delete</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  </td>
-  <td><a href=""><img src="{{$checkout->customer->img}}" class="img-thumbnail d-none d-md-inline-block" width="35"
-        style="margin-right:8px">{{$checkout->customer->name}}</a></td>
-  <td>{{$checkout->order->title}}</td> --}}
-  <td>
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" @change="selected()" name="aband" id="">
-      <label class="custom-control-label" for=""></label>
-    </div>
-  </td>
-  <td><a href="#"> <img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
-        style="margin-right:8px">Mark</a></td>
-  <td>iphone7</td>
-  <td>3 Days</td>
-  </tr>
-  {{-- $endforeach --}}
-  </tbody>
-  </table>
-  {{-- @endif --}}
-</div>
 </div>
 @endsection
 @section('script')
@@ -196,9 +140,6 @@
               $('input[name="selectAll"]').prop('indeterminate', true);
               $('input[name="selectAll"]').prop('checked', false);
             }
-          },
-          closeSession(){
-            $('.session').remove();
           }
         }
       })
