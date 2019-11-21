@@ -1,0 +1,77 @@
+{{-- after --}}
+<div class="main p-3">
+  {{-- session message --}}
+  @if (session('message'))
+  @component('componants.session')
+  {{session('message')}}
+  @endcomponent
+  @endif
+  @if(!$admins->count())
+  <div class="not-yet">
+    <h3 class="my-3">No Admins Yet</h3>
+    <img src="/img/not-found.svg" alt="No-admin" width="380">
+  </div>
+  @else
+  {{-- search --}}
+  <div class="search w-100 py-3">
+    <div class="form-group mb-0">
+      <div class="p-0 position-relative">
+        <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
+        <input id="search" type="text" class="form-control search-input" name="search" placeholder="Search for Admins">
+      </div>
+    </div>
+    {{-- grid --}}
+    @include('layouts.dashboard.grid')
+  </div>
+  {{-- admins in grid --}}
+  <div class="row mx-0 my-2 justify-around" v-if="grid">
+    @foreach($admins as $admin)
+    <div class="div-table bg-white m-2">
+      <div class="w-48 max-w-xs rounded overflow-hidden shadow-md admin">
+        <img class="w-32 mx-auto my-3" src="{{$admin->img}}" alt="{{$admin->name}}">
+        <div class="p-3 body">
+          <div class="font-bold text-base mb-2 title w-100">{{$admin->name}}</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">{{$admin->email}}</div>
+            <div class="font-bold text-sm mb-2">{{$admin->number}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @endforeach
+  </div>
+  {{-- admins in table --}}
+  <table class="table table-hover" v-else>
+    <thead>
+      <tr>
+        <th scope="col" width="15">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" @click="selectAll()" name="selectAll" id="selectAll">
+            <label class="custom-control-label" for="selectAll"></label>
+          </div>
+        </th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach($admin as $admin)
+      <tr>
+        <td>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" name="admin" value="{{$admin->id}}" id="{{$admin->id}}"
+              @change="selected()">
+            <label class="custom-control-label" for="{{$admin->id}}"></label>
+          </div>
+        </td>
+        <td><a href="/auth/admins/{{$admin->id}}"> <img src="{{$admin->img}}"
+              class="img-thumbnail d-none d-md-inline-block" width="35" style="margin-right:8px">{{$admin->name}}</a>
+        </td>
+        <td>{{$admin->email}}</td>
+        <td>{{$admin->number}}</td>
+        @endforeach
+    </tbody>
+  </table>
+  @endif
+</div>
