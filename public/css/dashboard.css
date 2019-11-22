@@ -348,6 +348,20 @@ table {
     color: #1c3053;
     text-decoration: none;
 }
+.custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before,
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: #667eea;
+    background-color: #667eea;
+    box-shadow: none;
+}
+.custom-control-label{
+    cursor: pointer;
+}
+.custom-control-label::before {
+    box-shadow: none;
+    border: #8b8b8b solid 1px;
+    border-radius: 10px !important;
+}
 .deliverd,
 .ongoing{
     height: fit-content;
@@ -479,6 +493,7 @@ a:hover {
 }
 
 label {
+    outline: none;
     font-weight: 700;
     color: #474747;
 }

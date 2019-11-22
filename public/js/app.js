@@ -17142,7 +17142,9 @@ new Vue({
     "dash-head": _components_dashboardHeader_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   created: function created() {
-    new WOW().init();
+    // init wow
+    new WOW().init(); // fixed nav scroll
+
     $(window).scroll(function () {
       if ($(window).scrollTop() >= 5) {
         $(".navbar").addClass('nav-top');
@@ -17153,13 +17155,44 @@ new Vue({
   },
   data: function data() {
     return {
-      grid: false
+      grid: false,
+      selectedAll: false,
+      select: false,
+      checkedRows: []
     };
   },
   methods: {
     // change view
     view: function view() {
       this.grid = !this.grid;
+    },
+    // select all checkboxes
+    selectAll: function selectAll() {
+      this.checkedRows = [];
+      this.selectedAll = !this.selectedAll;
+
+      if (this.selectedAll) {
+        // select All
+        $('input[name="checked"]').prop('checked', true); // $('input[name="checked"]').each(() => {
+        //     this.checkedRows.push(this.val());
+        // })
+      } else {
+        // diselect All
+        $('input[name="checked"]').prop('checked', false);
+      }
+    },
+    selected: function selected() {
+      if ($('input[type="checkbox"]:not(:checked)').length == 0) {
+        // all are checked
+        this.selectedAll = true;
+        $('input[name="selectAll"]').prop('checked', true);
+        $('input[name="selectAll"]').prop('indeterminate', false);
+      } else {
+        // some checkbox checked
+        this.selectedAll = false;
+        $('input[name="selectAll"]').prop('indeterminate', true);
+        $('input[name="selectAll"]').prop('checked', false);
+      }
     },
     // close session
     closeSession: function closeSession() {
