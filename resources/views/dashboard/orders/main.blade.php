@@ -71,7 +71,13 @@
                 style="margin-right:8px">Mark</a></td>
           <td>513239a9</td>
           <td>41st.</td>
-          <td><span class="deliverd">Deliverd</span></td>
+          <td>
+            <select class="form-control state">
+              <option class="deliverd" selected>Deliverd</option>
+              <option class="ongoing">OnGoing</option>
+              <option class="canceled">Canceled</option>
+            </select>
+          </td>
           <td>
             <div class="w-100 d-flex justify-end position-relative">
               <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"

@@ -362,6 +362,18 @@ table {
     border: #8b8b8b solid 1px;
     border-radius: 10px !important;
 }
+.state{
+    width: auto;
+    height: auto;
+    padding: .3rem 0.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fefefe;
+    background-color: #81e986;
+    border: none;
+    border-radius: 1.25rem;
+    font-size: smaller;
+}
 .deliverd,
 .ongoing{
     height: fit-content;
