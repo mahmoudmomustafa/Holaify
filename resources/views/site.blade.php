@@ -83,6 +83,9 @@
         <div class="recommended my-2">
             {{-- max five div --}}
             <div class="w-56 max-w-sm rounded overflow-hidden recommend">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-2 body">
                     <div class="d-flex justify-content-between m-1">
@@ -92,6 +95,9 @@
                 </div>
             </div>
             <div class="w-56 max-w-sm rounded overflow-hidden recommend">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-2 body">
                     <div class="d-flex justify-content-between m-1">
@@ -101,6 +107,9 @@
                 </div>
             </div>
             <div class="w-56 max-w-sm rounded overflow-hidden recommend">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-2 body">
                     <div class="d-flex justify-content-between m-1">
@@ -110,6 +119,9 @@
                 </div>
             </div>
             <div class="w-56 max-w-sm rounded overflow-hidden recommend">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-2 body">
                     <div class="d-flex justify-content-between m-1">
@@ -119,6 +131,9 @@
                 </div>
             </div>
             <div class="w-56 max-w-sm rounded overflow-hidden recommend">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-2 body">
                     <div class="d-flex justify-content-between m-1">
@@ -135,158 +150,173 @@
             Top Rated
         </div>
         <div class="rateded my-3">
-            {{-- rated items --}}
-                <div class="top-rated">
-                    <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
-                        <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-                        <div class="p-3 body">
-                            <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-                            <div class="d-flex flex-column">
-                                <div class="rate text-sm">
-                                    <input type="radio" name="stars" id="star-1" class="d-none" />
-                                    <input type="radio" name="stars" id="star-2" class="d-none" />
-                                    <input type="radio" name="stars" id="star-3" class="d-none" />
-                                    <input type="radio" name="stars" id="star-4" class="d-none" />
-                                    <input type="radio" name="stars" id="star-5" class="d-none" />
-                                    <section>
-                                        <label for="star-1">
-                                            <i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-2">
-                                            <i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-3"><i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-4"><i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-5"><i class="lni-star-filled"></i>
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="price font-bold text-base">EGP 10.00</div>
+            {{--5 rated items --}}
+            <div class="top-rated">
+                <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
+                    <div class="like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
+                    <div class="p-3 body">
+                        <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
+                        <div class="d-flex flex-column">
+                            <div class="rate text-sm">
+                                <input type="radio" name="stars" id="star-1" class="d-none" />
+                                <input type="radio" name="stars" id="star-2" class="d-none" />
+                                <input type="radio" name="stars" id="star-3" class="d-none" />
+                                <input type="radio" name="stars" id="star-4" class="d-none" />
+                                <input type="radio" name="stars" id="star-5" class="d-none" />
+                                <section>
+                                    <label for="star-1">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-2">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-3"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-4"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-5"><i class="lni-star-filled"></i>
+                                    </label>
+                                </section>
                             </div>
+                            <div class="price font-bold text-base">EGP 10.00</div>
                         </div>
                     </div>
-                    <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
-                        <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-                        <div class="p-3 body">
-                            <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-                            <div class="d-flex flex-column">
-                                <div class="rate text-sm">
-                                    <input type="radio" name="stars" id="star-1" class="d-none" />
-                                    <input type="radio" name="stars" id="star-2" class="d-none" />
-                                    <input type="radio" name="stars" id="star-3" class="d-none" />
-                                    <input type="radio" name="stars" id="star-4" class="d-none" />
-                                    <input type="radio" name="stars" id="star-5" class="d-none" />
-                                    <section>
-                                        <label for="star-1">
-                                            <i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-2">
-                                            <i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-3"><i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-4"><i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-5"><i class="lni-star-filled"></i>
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="price font-bold text-base">EGP 10.00</div>
+                </div>
+                <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
+                    <div class="like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
+                    <div class="p-3 body">
+                        <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
+                        <div class="d-flex flex-column">
+                            <div class="rate text-sm">
+                                <input type="radio" name="stars" id="star-1" class="d-none" />
+                                <input type="radio" name="stars" id="star-2" class="d-none" />
+                                <input type="radio" name="stars" id="star-3" class="d-none" />
+                                <input type="radio" name="stars" id="star-4" class="d-none" />
+                                <input type="radio" name="stars" id="star-5" class="d-none" />
+                                <section>
+                                    <label for="star-1">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-2">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-3"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-4"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-5"><i class="lni-star-filled"></i>
+                                    </label>
+                                </section>
                             </div>
+                            <div class="price font-bold text-base">EGP 10.00</div>
                         </div>
                     </div>
-                    <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
-                        <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-                        <div class="p-3 body">
-                            <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-                            <div class="d-flex flex-column">
-                                <div class="rate text-sm">
-                                    <input type="radio" name="stars" id="star-1" class="d-none" />
-                                    <input type="radio" name="stars" id="star-2" class="d-none" />
-                                    <input type="radio" name="stars" id="star-3" class="d-none" />
-                                    <input type="radio" name="stars" id="star-4" class="d-none" />
-                                    <input type="radio" name="stars" id="star-5" class="d-none" />
-                                    <section>
-                                        <label for="star-1">
-                                            <i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-2">
-                                            <i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-3"><i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-4"><i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-5"><i class="lni-star-filled"></i>
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="price font-bold text-base">EGP 10.00</div>
+                </div>
+                <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
+                    <div class="like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
+                    <div class="p-3 body">
+                        <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
+                        <div class="d-flex flex-column">
+                            <div class="rate text-sm">
+                                <input type="radio" name="stars" id="star-1" class="d-none" />
+                                <input type="radio" name="stars" id="star-2" class="d-none" />
+                                <input type="radio" name="stars" id="star-3" class="d-none" />
+                                <input type="radio" name="stars" id="star-4" class="d-none" />
+                                <input type="radio" name="stars" id="star-5" class="d-none" />
+                                <section>
+                                    <label for="star-1">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-2">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-3"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-4"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-5"><i class="lni-star-filled"></i>
+                                    </label>
+                                </section>
                             </div>
+                            <div class="price font-bold text-base">EGP 10.00</div>
                         </div>
                     </div>
-                    <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
-                        <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-                        <div class="p-3 body">
-                            <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-                            <div class="d-flex flex-column">
-                                <div class="rate text-sm">
-                                    <input type="radio" name="stars" id="star-1" class="d-none" />
-                                    <input type="radio" name="stars" id="star-2" class="d-none" />
-                                    <input type="radio" name="stars" id="star-3" class="d-none" />
-                                    <input type="radio" name="stars" id="star-4" class="d-none" />
-                                    <input type="radio" name="stars" id="star-5" class="d-none" />
-                                    <section>
-                                        <label for="star-1">
-                                            <i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-2">
-                                            <i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-3"><i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-4"><i class="lni-star-filled"></i>
-                                        </label>
-                                        <label for="star-5"><i class="lni-star-filled"></i>
-                                        </label>
-                                    </section>
-                                </div>
-                                <div class="price font-bold text-base">EGP 10.00</div>
+                </div>
+                <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
+                    <div class="like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
+                    <div class="p-3 body">
+                        <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
+                        <div class="d-flex flex-column">
+                            <div class="rate text-sm">
+                                <input type="radio" name="stars" id="star-1" class="d-none" />
+                                <input type="radio" name="stars" id="star-2" class="d-none" />
+                                <input type="radio" name="stars" id="star-3" class="d-none" />
+                                <input type="radio" name="stars" id="star-4" class="d-none" />
+                                <input type="radio" name="stars" id="star-5" class="d-none" />
+                                <section>
+                                    <label for="star-1">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-2">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-3"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-4"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-5"><i class="lni-star-filled"></i>
+                                    </label>
+                                </section>
                             </div>
+                            <div class="price font-bold text-base">EGP 10.00</div>
                         </div>
                     </div>
-                    <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
-                            <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-                            <div class="p-3 body">
-                                <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-                                <div class="d-flex flex-column">
-                                    <div class="rate text-sm">
-                                        <input type="radio" name="stars" id="star-1" class="d-none" />
-                                        <input type="radio" name="stars" id="star-2" class="d-none" />
-                                        <input type="radio" name="stars" id="star-3" class="d-none" />
-                                        <input type="radio" name="stars" id="star-4" class="d-none" />
-                                        <input type="radio" name="stars" id="star-5" class="d-none" />
-                                        <section>
-                                            <label for="star-1">
-                                                <i class="lni-star-filled"></i>
-                                            </label>
-                                            <label for="star-2">
-                                                <i class="lni-star-filled"></i>
-                                            </label>
-                                            <label for="star-3"><i class="lni-star-filled"></i>
-                                            </label>
-                                            <label for="star-4"><i class="lni-star-filled"></i>
-                                            </label>
-                                            <label for="star-5"><i class="lni-star-filled"></i>
-                                            </label>
-                                        </section>
-                                    </div>
-                                    <div class="price font-bold text-base">EGP 10.00</div>
-                                </div>
+                </div>
+                <div class="w-56 max-w-xs rounded overflow-hidden shadow-md rated">
+                    <div class="like">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
+                    <div class="p-3 body">
+                        <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
+                        <div class="d-flex flex-column">
+                            <div class="rate text-sm">
+                                <input type="radio" name="stars" id="star-1" class="d-none" />
+                                <input type="radio" name="stars" id="star-2" class="d-none" />
+                                <input type="radio" name="stars" id="star-3" class="d-none" />
+                                <input type="radio" name="stars" id="star-4" class="d-none" />
+                                <input type="radio" name="stars" id="star-5" class="d-none" />
+                                <section>
+                                    <label for="star-1">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-2">
+                                        <i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-3"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-4"><i class="lni-star-filled"></i>
+                                    </label>
+                                    <label for="star-5"><i class="lni-star-filled"></i>
+                                    </label>
+                                </section>
                             </div>
+                            <div class="price font-bold text-base">EGP 10.00</div>
                         </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -298,6 +328,9 @@
         <div class="just-added my-3">
             {{-- max 5 divs --}}
             <div class="w-56 max-w-xs rounded overflow-hidden shadow-md added">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-6 py-2 body">
                     <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -308,6 +341,9 @@
                 </div>
             </div>
             <div class="w-56 max-w-xs rounded overflow-hidden shadow-md added">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-6 py-2 body">
                     <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -318,6 +354,9 @@
                 </div>
             </div>
             <div class="w-56 max-w-xs rounded overflow-hidden shadow-md added">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-6 py-2 body">
                     <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -328,6 +367,9 @@
                 </div>
             </div>
             <div class="w-56 max-w-xs rounded overflow-hidden shadow-md added">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-6 py-2 body">
                     <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -338,6 +380,9 @@
                 </div>
             </div>
             <div class="w-56 max-w-xs rounded overflow-hidden shadow-md added">
+                <div class="like">
+                    <i class="far fa-heart"></i>
+                </div>
                 <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
                 <div class="px-6 py-2 body">
                     <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>

@@ -9,6 +9,7 @@
         <div class="font-bold text-2xl mb-2 title w-100 text-center">Mahmoud Mustafa</div>
         <div class="d-flex flex-column m-3 setting">
           <div class="font-bold text-base mb-2 li"><a href="/profile" class="w-100">Personal Info.</a></div>
+          <div class="font-bold text-base mb-2 li"><a href="/profile/lists" class="w-100">Your Lists</a></div>
           <div class="font-bold text-base mb-2 li active"><a href="/profile/orders" class="w-100">Orders</a></div>
           <div class="font-bold text-base mb-2 li"><a href="/profile/setting" class="w-100">Settings</a></div>
         </div>
@@ -23,6 +24,9 @@
           {{-- orders --}}
           <div class="orders d-flex">
             <div class="w-48 max-w-xs m-1 rounded overflow-hidden shadow-md product">
+              <div class="like">
+                <i class="far fa-heart"></i>
+              </div>
               <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
               <div class="p-3 body">
                 <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -33,15 +37,18 @@
               </div>
             </div>
             <div class="w-48 max-w-xs m-1 rounded overflow-hidden shadow-md product">
-                <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
-                <div class="p-3 body">
-                  <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
-                  <div class="d-flex justify-content-between align-items-center m-1">
-                    <div class="price font-bold text-xs">EGP 10.00</div>
-                    <span class="ongoing">Ongoing</span>
-                  </div>
+              <div class="like">
+                <i class="far fa-heart"></i>
+              </div>
+              <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
+              <div class="p-3 body">
+                <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
+                <div class="d-flex justify-content-between align-items-center m-1">
+                  <div class="price font-bold text-xs">EGP 10.00</div>
+                  <span class="ongoing">Ongoing</span>
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </div>

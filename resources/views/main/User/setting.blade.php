@@ -9,6 +9,7 @@
         <div class="font-bold text-2xl mb-2 title w-100 text-center">Mahmoud Mustafa</div>
         <div class="d-flex flex-column m-3 setting">
           <div class="font-bold text-base mb-2 li"><a href="/profile" class="w-100">Personal Info.</a></div>
+          <div class="font-bold text-base mb-2 li"><a href="/profile/lists" class="w-100">Your Lists</a></div>
           <div class="font-bold text-base mb-2 li"><a href="/profile/orders" class="w-100">Orders</a></div>
           <div class="font-bold text-base mb-2 li active"><a href="/profile/setting" class="w-100">Settings</a></div>
         </div>
