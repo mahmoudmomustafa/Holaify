@@ -11,7 +11,12 @@
       {{-- product info --}}
       <div class="product-info m-1 p-3">
         <div class="info m-2">
-          <div class="product-title pb-1">Product title</div>
+          <div class="d-flex justify-between">
+            <div class="product-title pb-1">Product title</div>
+            <div class="text-lg p-1">
+                <i class="far fa-heart"></i>
+            </div>
+          </div>
           <div class="product-price pb-1 mb-2">EGP 10.00</div>
           <div class="product-des p-2">
             <div class="header">

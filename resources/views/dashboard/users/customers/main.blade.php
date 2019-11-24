@@ -59,9 +59,9 @@
         <tr>
           <td scope="col">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" name="customer" @change="selected()"
-                value="customerID" id="selectAll">
-              <label class="custom-control-label" for="selectAll"></label>
+              <input type="checkbox" class="custom-control-input" name="checked" v-model="checkedRows" @change="selected()"
+                value="customerID" id="customerID">
+              <label class="custom-control-label" for="customerID"></label>
             </div>
           </td>
           <td><a href="#"><img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
@@ -83,48 +83,4 @@
     </table>
   </div>
 </div>
-@endsection
-@section('script')
-<script>
-  let app = new Vue({  
-  el:".content",
-  data:{
-    grid:false,
-    selectedAll:false,
-    anySelect:false
-  },
-  methods:{
-    // grid view
-    view(){
-      this.grid = !this.grid;
-    },
-    selectAll(){
-      this.selectedAll = !this.selectedAll;
-      if(this.selectedAll){
-        // select All
-        $('input[name="customer"]').prop('checked',true);
-      }else{
-        // diselect All
-        $('input[name="customer"]').prop('checked',false);        
-      }
-    },
-    selected(){
-      if($('input[name="customer"]:not(:checked)').length == 0){ 
-        // all are checked
-        this.selectedAll = true;
-        $('input[name="selectAll"]').prop('checked', true);
-        $('input[name="selectAll"]').prop('indeterminate', false);
-      }else{
-        // some checkbox checked
-        this.selectedAll = false;
-        $('input[name="selectAll"]').prop('indeterminate', true);
-        $('input[name="selectAll"]').prop('checked', false);
-      }
-    },
-    closeSession(){
-      $('.session').remove();
-    }
-  }
-})
-</script>
 @endsection

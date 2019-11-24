@@ -66,7 +66,8 @@
         <tr>
           <th scope="col" width="15">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" @click="selectAll()" name="SelectAll" id="SelectAll">
+              <input type="checkbox" class="custom-control-input" @click="selectAll()" name="SelectAll" id="SelectAll"
+                :value="checkedRows">
               <label class="custom-control-label" for="SelectAll"></label>
             </div>
           </th>
@@ -80,8 +81,32 @@
         <tr>
           <td>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" @change="selected()" name="aband" id="">
-              <label class="custom-control-label" for=""></label>
+              <input type="checkbox" class="custom-control-input custom" name="checked" id="customer" @click="selected()"
+                value="customer1" v-model="checkedRows">
+              <label class="custom-control-label" for="customer"></label>
+            </div>
+          </td>
+          <td><a href="#"> <img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
+                style="margin-right:8px">Mark</a></td>
+          <td>iphone7</td>
+          <td>3 Days</td>
+          <td>
+            <div class="w-100 d-flex justify-end position-relative">
+              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit" href="#">Edit</a>
+                <a class="dropdown-item delete" href="#">Delete</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input custom" name="checked" id="custome2r" @click="selected()"
+                value="customer1asda" v-model="checkedRows">
+              <label class="custom-control-label" for="custome2r"></label>
             </div>
           </td>
           <td><a href="#"> <img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
@@ -103,45 +128,4 @@
     </table>
   </div>
 </div>
-@endsection
-@section('script')
-<script>
-  let app = new Vue({  
-        el:".content",
-        data:{
-          grid:false,
-          selectedAll:false,
-          anySelect:false
-        },
-        methods:{
-          // grid view
-          view(){
-            this.grid = !this.grid;
-          },
-          selectAll(){
-            this.selectedAll = !this.selectedAll;
-            if(this.selectedAll){
-              // select All
-              $('input[name="admin"]').prop('checked',true);
-            }else{
-              // diselect All
-              $('input[name="admin"]').prop('checked',false);        
-            }
-          },
-          selected(){
-            if($('input[name="admin"]:not(:checked)').length == 0){ 
-              // all are checked
-              this.selectedAll = true;
-              $('input[name="selectAll"]').prop('checked', true);
-              $('input[name="selectAll"]').prop('indeterminate', false);
-            }else{
-              // some checkbox checked
-              this.selectedAll = false;
-              $('input[name="selectAll"]').prop('indeterminate', true);
-              $('input[name="selectAll"]').prop('checked', false);
-            }
-          }
-        }
-      })
-</script>
 @endsection

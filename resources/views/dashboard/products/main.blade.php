@@ -83,8 +83,8 @@
         <tr>
           <td>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" name="product" value="product-id" id="Product-id"
-                @change="selected()">
+              <input type="checkbox" class="custom-control-input" value="product-id" id="Product-id"
+                @change="selected()" name="checked" v-model="checkedRows">
               <label class="custom-control-label" for="Product-id"></label>
             </div>
           </td>
@@ -130,40 +130,4 @@
     </table>
   </div>
 </div>
-@endsection
-@section('script')
-<script>
-  let app = new Vue({  
-  el:".content",
-  data:{
-    selectedAll:false,
-    anySelect:false
-  },
-  methods:{
-    selectAll(){
-      this.selectedAll = !this.selectedAll;
-      if(this.selectedAll){
-        // select All
-        $('input[name="product"]').prop('checked',true);
-      }else{
-        // diselect All
-        $('input[name="product"]').prop('checked',false);        
-      }
-    },
-    selected(){
-      if($('input[name="product"]:not(:checked)').length == 0){ 
-        // all are checked
-        this.selectedAll = true;
-        $('input[name="selectAll"]').prop('checked', true);
-        $('input[name="selectAll"]').prop('indeterminate', false);
-      }else{
-        // some checkbox checked
-        this.selectedAll = false;
-        $('input[name="selectAll"]').prop('checked', false);
-        $('input[name="selectAll"]').prop('indeterminate', true);
-      }
-    }
-  }
-})
-</script>
 @endsection

@@ -71,7 +71,13 @@
                 style="margin-right:8px">Mark</a></td>
           <td>513239a9</td>
           <td>41st.</td>
-          <td><span class="deliverd">Deliverd</span></td>
+          <td>
+            <select class="form-control state">
+              <option class="deliverd" selected>Deliverd</option>
+              <option class="ongoing">OnGoing</option>
+              <option class="canceled">Canceled</option>
+            </select>
+          </td>
           <td>
             <div class="w-100 d-flex justify-end position-relative">
               <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
@@ -87,43 +93,4 @@
     </table>
   </div>
 </div>
-@endsection
-@section('script')
-<script>
-  let app = new Vue({  
-    el:".content",
-    data:{
-      selectedAll:false,
-      anySelect:false
-    },
-    methods:{
-      selectAll(){
-        this.selectedAll = !this.selectedAll;
-        if(this.selectedAll){
-          // select All
-          $('input[name="admin"]').prop('checked',true);
-        }else{
-          // diselect All
-          $('input[name="admin"]').prop('checked',false);        
-        }
-      },
-      selected(){
-        if($('input[name="admin"]:not(:checked)').length == 0){ 
-          // all are checked
-          this.selectedAll = true;
-          $('input[name="selectAll"]').prop('checked', true);
-          $('input[name="selectAll"]').prop('indeterminate', false);
-        }else{
-          // some checkbox checked
-          this.selectedAll = false;
-          $('input[name="selectAll"]').prop('indeterminate', true);
-          $('input[name="selectAll"]').prop('checked', false);
-        }
-      },
-      closeSession(){
-        $('.session').remove();
-      }
-    }
-  })
-</script>
 @endsection

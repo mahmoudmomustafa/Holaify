@@ -23,19 +23,22 @@ body {
     transition: 500ms ease;
     align-items: center;
 }
-.navbar .navbar-brand span{
+
+.navbar .navbar-brand span {
     /* font-size: medium; */
     color: white;
 
 }
+
 .navbar-brand:hover {
     color: white;
     transform: translate(10px)
 }
 
-.navbar .nav-link{
+.navbar .nav-link {
     color: #DFDBE5;
 }
+
 .navbar .nav-link:hover {
     color: #DFDBE5;
 }
@@ -150,7 +153,7 @@ body {
 
 .nav .nav-item .dropdown-ul .li a {
     padding: 5px;
-    color:#222b3a
+    color: #222b3a
 }
 
 .nav .nav-item .dropdown-ul .li a:hover {
@@ -181,9 +184,11 @@ body {
 .content .header .add {
     float: right;
 }
-.content .header .add a{
+
+.content .header .add a {
     color: #222B3A;
 }
+
 .content .main .not-yet {
     display: flex;
     justify-content: center;
@@ -298,10 +303,12 @@ body {
     align-items: center;
     margin: 0 10px;
 }
-.search .grid span{
+
+.search .grid span {
     color: #222b3a;
     font-size: small;
 }
+
 .search .grid i {
     color: #3f4253;
     font-size: 25px;
@@ -337,9 +344,11 @@ table {
     border-radius: 5px;
     /* box-shadow: 0 0 5px #8080803b */
 }
+
 .table thead th {
-   border-top: 0;
+    border-top: 0;
 }
+
 .table td {
     border: 0;
 }
@@ -348,8 +357,39 @@ table {
     color: #1c3053;
     text-decoration: none;
 }
+
+.custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before,
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: #667eea;
+    background-color: #667eea;
+    box-shadow: none;
+}
+
+.custom-control-label {
+    cursor: pointer;
+}
+
+.custom-control-label::before {
+    box-shadow: none;
+    border: #8b8b8b solid 1px;
+    border-radius: 10px !important;
+}
+
+.state {
+    width: auto;
+    height: auto;
+    padding: .3rem 0.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fefefe;
+    background-color: #81e986;
+    border: none;
+    border-radius: 1.25rem;
+    font-size: smaller;
+}
+
 .deliverd,
-.ongoing{
+.ongoing {
     height: fit-content;
     padding: 3px 10px;
     background: #3bff43;
@@ -357,12 +397,15 @@ table {
     color: white;
     font-size: smaller;
 }
-.ongoing{
+
+.ongoing {
     background: #653bff !important;
 }
-.canceled{
+
+.canceled {
     background: #e91e63 !important;
 }
+
 .product,
 .admin,
 .customer,
@@ -374,28 +417,31 @@ table {
 .product:hover,
 .admin:hover,
 .customer:hover,
-.order:hover
-{
+.order:hover {
     transform: scale(1.03);
-    background:#667eea !important;
+    background: #667eea !important;
     box-shadow: 0 0 5px rgba(219, 219, 219, 0.842);
     color: #ffffff;
 }
-.product:hover label{
+
+.product:hover label {
     color: rgb(248, 248, 248);
 }
+
 a:hover {
     text-decoration: none;
 }
+
 .product .title,
 .admin .title,
 .customer .title,
 .order .title,
-.title{
+.title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 /* forms */
 .main .form {
     padding: 2rem 10px;
@@ -434,8 +480,9 @@ a:hover {
     border: 0;
     color: white !important;
     background: linear-gradient(135deg, #667eea 0%, #3F51B5 100%);
-    padding: 8px 15px;
+    padding: 6px 12px;
     transition: 500ms ease;
+    font-size: .9rem;
 }
 
 .btn-primary:hover {
@@ -479,6 +526,7 @@ a:hover {
 }
 
 label {
+    outline: none;
     font-weight: 700;
     color: #474747;
 }
