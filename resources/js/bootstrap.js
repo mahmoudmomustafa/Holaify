@@ -1,5 +1,6 @@
 import Vue from "vue"
 import axios from "axios"
+import Chart from "chart.js"
 window.Vue = Vue;
 
 try {

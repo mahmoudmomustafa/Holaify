@@ -25,41 +25,60 @@
         </div>
     </div>
     {{-- Content --}}
-    <div class="overview p-3">
+    <div class="overview p-2">
         {{-- overview --}}
-        <div class="row mx-0 justify-center py-3">
-            <div class="div-table md:w-1/4 w-full">
-                <div class="heading">
-                    Orders
-                </div>
-                <div class="chart-container">
-                    <canvas id="orders" width="200" height="200"></canvas>
-                </div>
-            </div>
-            <div class="div-table md:w-2/4 w-full">
-                <div class="heading font-bold">
-                    Orders Weekly
-                </div>
-                <div class="body">
-                    
+        <div class="flex flex-wrap">
+            <div class="md:w-2/3 w-full">
+                <div class="m-1">
+                    <div class="div-table">
+                        <div class="heading font-bold mb-2">
+                            Sales
+                        </div>
+                        <div class="wrapper">
+                            <sales-chart></sales-chart>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="div-table md:w-2/4 w-full">
-                <div class="heading">
-                    Total Order
-                </div>
-                <div class="body">
-                    asdsd 0
-                    {{-- {{$orders->count()}} --}}
+            <div class="md:w-1/3 w-full">
+                <div class="m-1">
+                    <div class="div-table">
+                        <div class="heading pb-2">
+                            Orders
+                        </div>
+                        <div class="wrapper">
+                            <order-chart></order-chart>
+                        </div>
+                        <div class="num text-lg text-gray-700 text-center pt-3">
+                            10 Orders
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="div-table md:w-1/4 w-full">
-                <div class="heading">
-                    Total Customers
+            <div class="md:w-1/3 w-full">
+                <div class="m-1">
+                    <div class="div-table">
+                        <div class="heading">
+                            Total Order
+                        </div>
+                        <div class="body">
+                            asdsd 0
+                            {{-- {{$orders->count()}} --}}
+                        </div>
+                    </div>
                 </div>
-                <div class="body">
-                    0
-                    {{-- {{$customers->count()}} --}}
+            </div>
+            <div class="md:w-2/3 w-full">
+                <div class="m-1">
+                    <div class="div-table">
+                        <div class="heading">
+                            Total Customers
+                        </div>
+                        <div class="body">
+                            0
+                            {{-- {{$customers->count()}} --}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
