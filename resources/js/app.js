@@ -1,10 +1,14 @@
 import './bootstrap'
 import dashboardHeader from "./components/dashboardHeader.vue"
+import orderChart from "./components/orderChart.vue"
+import salesChart from "./components/salesChart.vue"
 
 new Vue({
     el: '#app',
     components: {
         "dash-head": dashboardHeader,
+        "order-chart":orderChart,
+        "sales-chart":salesChart
     },
     created() {
         // init wow
