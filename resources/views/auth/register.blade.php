@@ -3,30 +3,18 @@
 @section('content')
 <div class="container">
     <div class="contain">
-        <div class="rows row m-4 w-100">
-            {{-- left-side --}}
-            <div class="d-none d-md-block col-md-5 p-0">
-                <div class="left-side">
-                    <div class="container">
-                        <div class="header d-flex py-5 px-4">
-                            <img src="/img/brand.svg" width="40" class="wow fadeIn" data-wow-duration="2s"
-                                data-wow-delay="0s" alt="brand-img">
-                            <h1 class="wow fadeInLeft mb-0" data-wow-duration="1s" data-wow-delay="1s">Holaify</h1>
-                        </div>
-                        <img src="/img/log.svg" alt="register-img" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
-                    </div>
-                </div>
-            </div>
+        <div class="rows w-100">
             {{-- form --}}
-            <div class="col-12 col-md-7 p-0">
+            <div class="w-full md:w-2/4 mx-4 mb-3 mt-5 shadow-sm bg:white">
                 <div class="form p-3">
                     <div class="container">
                         {{-- register --}}
-                        <nav class="mb-3 p-2">
-                            <div class="float-right">
+                        <nav class="p-2">
+                            <div class="float-right wow slideInDown text-gray-700 text-xs" data-wow-duration="3s"
+                            data-wow-delay="0s">
                                 Already a member ?
                                 <a href="{{ route('login') }}" data-toggle="tooltip" data-placement="bottom"
-                                    title="login">
+                                    title="login"  class="text-sm">
                                     Sign In
                                 </a>
                             </div>
@@ -34,14 +22,17 @@
                         {{-- form login --}}
                         <div class="log p-3">
                             {{-- header --}}
-                            <div class="header p-2 pb-4">
-                                <h3 class="wow slideInDown" data-wow-duration="2s" data-wow-delay="0s">Sign Up to
+                            <div class="header p-2">
+                                <img src="/img/online.svg" alt="icon" width="100" class="wow tada"
+                                    data-wow-duration="1s" data-wow-delay="0s">
+                                <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                                     Holafiy</h3>
                             </div>
                             {{-- social acc --}}
                             <div class="social p-2">
                                 {{-- links --}}
-                                <div class="d-flex flex-row justify-content-center my-2 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
+                                <div class="d-flex flex-row justify-content-center my-1 wow fadeInUp"
+                                    data-wow-duration="2s" data-wow-delay="0s">
                                     {{-- google account --}}
                                     <div class="link">
                                         <a href="#" class="btn" data-toggle="tooltip" data-placement="bottom"
@@ -70,8 +61,9 @@
                                     <div class="section first-div show mb-3">
                                         {{-- names --}}
                                         <div class="form-group">
-                                            <div class="col-md-8 m-auto">
-                                                <label for="name">Full Name</label>
+                                            <div class="md:w-4/5 w-full m-auto">
+                                                <label for="name" class="text-gray-800 text-sm font-bold">Full
+                                                    Name</label>
                                                 <input id="name" type="text"
                                                     class="form-control @error('name') is-invalid @enderror" name="name"
                                                     required autofocus placeholder="Full Name">
@@ -84,8 +76,9 @@
                                         </div>
                                         {{-- username --}}
                                         <div class="form-group">
-                                            <div class="col-md-8 m-auto">
-                                                <label for="UserName">UserName</label>
+                                            <div class="md:w-4/5 w-full m-auto">
+                                                <label for="UserName"
+                                                    class="text-gray-800 text-sm font-bold">UserName</label>
                                                 <input id="UserName" type="text"
                                                     class="form-control @error('userName') is-invalid @enderror"
                                                     name="userName" required placeholder="UserName" autocomplete="none">
@@ -101,8 +94,9 @@
                                     <div class="section second-div mb-3">
                                         {{-- email --}}
                                         <div class="form-group">
-                                            <div class="col-md-8 m-auto">
-                                                <label for="UserName">Email Address</label>
+                                            <div class="md:w-4/5 w-full m-auto">
+                                                <label for="email" class="text-gray-800 text-sm font-bold">Email
+                                                    Address</label>
                                                 <input id="email" type="email"
                                                     class="form-control @error('email') is-invalid @enderror"
                                                     name="email" required placeholder="Email Address"
@@ -117,8 +111,9 @@
                                         </div>
                                         {{-- mobile --}}
                                         <div class="form-group">
-                                            <div class="col-md-8 m-auto">
-                                                <label for="number">Mobile</label>
+                                            <div class="md:w-4/5 w-full m-auto">
+                                                <label for="number"
+                                                    class="text-gray-800 text-sm font-bold">Mobile</label>
                                                 <input id="number" type="text"
                                                     class="form-control @error('number') is-invalid @enderror"
                                                     name="number" required placeholder="Phone Number">
@@ -132,9 +127,10 @@
                                     </div>
                                     <div class="section third-div mb-3">
                                         {{-- password --}}
-                                        <div class="form-group row mb-3">
-                                            <div class="col-md-6 mb-3">
-                                                <label for="password">Password</label>
+                                        <div class="form-group">
+                                            <div class="md:w-4/5 w-full m-auto">
+                                                <label for="password"
+                                                    class="text-gray-800 text-sm font-bold">Password</label>
                                                 <input id="password" type="password"
                                                     class="form-control @error('password') is-invalid @enderror"
                                                     name="password" placeholder="Password" autocomplete="none">
@@ -145,8 +141,11 @@
                                                 </span>
                                                 @enderror
                                             </div>
-                                            <div class="col-md-6 mb-3">
-                                                <label for="password-confirm">Confirm Password</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="md:w-4/5 w-full m-auto">
+                                                <label for="password-confirm"
+                                                    class="text-gray-800 text-sm font-bold">Confirm Password</label>
                                                 <input id="password-confirm" type="password" class="form-control"
                                                     name="password_confirmation" placeholder="Confirm Password"
                                                     autocomplete="none">
@@ -162,7 +161,7 @@
                                         </div>
                                     </div>
                                     {{-- arrows --}}
-                                    <div class="arrows d-flex justify-content-end p-3">
+                                    <div class="arrows d-flex justify-content-end px-3 pt-3">
                                         <div class="arrow back" data-toggle="tooltip" data-placement="top" title="Back">
                                             <i class="fas fa-angle-left m-2"></i>
                                         </div>

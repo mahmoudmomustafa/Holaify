@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Philosopher|Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
 $fontColor:#3f4253;
 $aColor:#0053a9;
 $aColorHover:#32759c;
@@ -7,25 +8,23 @@ $aColorHover:#32759c;
 body {
     background-color: #f2f2f2;
     background-image: url("../img/bg.svg");
+    min-width: max-content;
     background-attachment: fixed;
 }
 
 .contain {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .rows {
-        background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-        box-shadow: 0 0 20px #80808057;
-        border-radius: 10px;
-        max-width: 1115px;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
         // right side form
         .form {
             background: white;
-            border-radius: 10px;
             font-family: 'Raleway';
             transition: 500ms ease;
 
@@ -47,9 +46,14 @@ body {
 
             //form header
             .header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
                 h3 {
                     font-size: 1.9rem;
-                    color: $fontColor;
+                    color: #fe494c;
+                    font-family: 'Merienda One', cursive;
                 }
             }
 
@@ -106,19 +110,21 @@ body {
             //form
             .body {
                 .form-group {
+
                     .form-control {
                         border: 0;
-                        box-shadow: 0 0 3px #c2c2c2;
-                        background: #f7f7f7;
+                        background: #f2f2f2;
                     }
-
+                    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+                        background-color: #fe494c;
+                    }
                     .btn-primary {
                         border: 0;
                         font-weight: 800;
-                        // background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+                        background: #fe494c;
                         transition: 500ms ease;
-                        &:hover{
+
+                        &:hover {
                             transform: scale(0.9);
                         }
                     }
@@ -142,6 +148,11 @@ body {
                             padding: .5rem .8rem;
                             font-size: 1.4rem;
                             border-radius: 50px;
+                            transition: 500ms ease;
+                            &:hover{
+                                color: white;
+                                background: #fe494c;
+                            }
                         }
                     }
                 }
