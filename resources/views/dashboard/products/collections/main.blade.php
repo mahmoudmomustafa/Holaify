@@ -20,6 +20,17 @@
     @else --}}
     {{-- select & search --}}
     <div class="search w-100 py-3">
+      {{-- sort --}}
+      <div class="dropdown">
+          <button class="text-sm text-gray-700 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Sort
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+          </div>
+        </div>
       {{-- view --}}
       @include('layouts.dashboard.grid')
       {{-- search --}}
