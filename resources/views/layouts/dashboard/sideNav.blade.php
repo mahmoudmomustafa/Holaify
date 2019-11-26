@@ -31,14 +31,21 @@
           </div>
         </div>
       </li>
-      {{-- users --}}
+      {{-- customers --}}
       <li class="nav-item">
         <a class="nav-link" href="/auth/customers"><i class="fas fa-user-friends"></i>
           Customers</a>
       </li>
+      {{-- admins --}}
       <li class="nav-item">
         <a class="nav-link" href="/auth/admins"><i class="fas fa-users-cog"></i>
           Admins</a>
+      </li>
+      {{-- setting --}}
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/settings">
+          <i class="fas fa-cog"></i>
+          Settings</a>
       </li>
     </div>
   </ul>

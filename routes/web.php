@@ -40,6 +40,10 @@ Route::get('/collection', function () {
 Auth::routes();
 // Dashboard
 Route::get('/auth', 'DashboardController@index')->name('dashboard');
+//settings
+Route::get('/auth/settings',function () {
+    return view('dashboard.settings');
+});
 //orders
 Route::get('/auth/orders', function () {
     return view('dashboard.orders.main');
