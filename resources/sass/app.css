@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Philosopher|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merienda+One&display=swap");
+body {
+  background-color: #f2f2f2;
+  background-image: url("../img/bg.svg");
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  background-attachment: fixed;
+}
+
+.contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contain .rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contain .rows .form {
+  background: white;
+  font-family: 'Raleway';
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.contain .rows .form nav {
+  overflow: auto;
+  font-size: .9rem;
+  color: #3f4253;
+}
+
+.contain .rows .form nav a {
+  color: #0053a9;
+}
+
+.contain .rows .form nav a:hover {
+  color: #32759c;
+  text-decoration: none;
+}
+
+.contain .rows .form .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contain .rows .form .header h3 {
+  font-size: 1.9rem;
+  color: #fe494c;
+  font-family: 'Merienda One', cursive;
+}
+
+.contain .rows .form .social a {
+  color: #3f4253;
+  padding: 8px 4px;
+  background: #e7e7e7;
+  -webkit-box-shadow: 0 0 3px #adadad;
+          box-shadow: 0 0 3px #adadad;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+  margin: 5px 10px;
+  font-weight: 300;
+}
+
+.contain .rows .form .social a i {
+  padding: 0 8px;
+}
+
+.contain .rows .form .social a span {
+  padding: 0 10px;
+}
+
+.contain .rows .form .social .social-active {
+  color: white !important;
+  background: #178ce9;
+}
+
+.contain .rows .form .social .or span {
+  color: #3f4253;
+}
+
+.contain .rows .form .social .or span::after {
+  content: "";
+  position: absolute;
+  background: #3f425338;
+  width: 10%;
+  height: 1px;
+  top: 50%;
+  right: 35%;
+}
+
+.contain .rows .form .social .or span::before {
+  content: "";
+  position: absolute;
+  background: #3f425338;
+  width: 10%;
+  height: 1px;
+  top: 50%;
+  left: 35%;
+}
+
+.contain .rows .form .body .form-group .form-control {
+  border: 0;
+  background: #f2f2f2;
+}
+
+.contain .rows .form .body .form-group .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #fe494c;
+}
+
+.contain .rows .form .body .form-group .btn-primary {
+  border: 0;
+  font-weight: 800;
+  background: #fe494c;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.contain .rows .form .body .form-group .btn-primary:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.contain .rows .form .body .section {
+  display: none;
+}
+
+.contain .rows .form .body .show {
+  display: block;
+}
+
+.contain .rows .form .body .arrows .arrow {
+  cursor: pointer;
+}
+
+.contain .rows .form .body .arrows .arrow i {
+  background: #e7e7e7;
+  -webkit-box-shadow: 0 0 5px #80808085;
+          box-shadow: 0 0 5px #80808085;
+  padding: .5rem .8rem;
+  font-size: 1.4rem;
+  border-radius: 50px;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.contain .rows .form .body .arrows .arrow i:hover {
+  color: white;
+  background: #fe494c;
+}
+
+.contain .rows .left-side {
+  height: 100%;
+  font-family: 'Righteous';
+}
+
+.contain .rows .left-side .header h1 {
+  font-size: 2rem;
+  color: white;
+}
+/*# sourceMappingURL=app.css.map */

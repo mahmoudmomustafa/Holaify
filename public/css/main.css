@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Philosopher|Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway|Righteous&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Raleway|Righteous|Roboto&display=swap');
 body {
     background-color: #f2f2f2;
     background-image: url("../img/bg.svg");
@@ -87,11 +84,14 @@ body {
     transition: 500ms linear;
 }
 
-.nav-top{
+/* .nav-top{
     transition: 500ms ease;
     width: 100%;
     position: fixed;
     z-index: 2;
+} */
+img{
+    width: fit-content !important;
 }
 .carousel{
     max-height: 600px;
@@ -172,8 +172,7 @@ li.nav-item::after {
 .navbar .navbar-nav {
     display: flex;
     flex-direction: row;
-}
-
+}  
 .searchModel .modal-content {
     border-radius: 11px;
     border: 0;
@@ -218,6 +217,69 @@ li.nav-item::after {
     color: white;
     transform: scale(0.99);
     box-shadow: none;
+}
+HTML CSSResult
+.search {
+  display: table;
+}
+.search input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 28px;
+  min-width: 0;
+  padding: 0;
+  z-index: 1;
+  position: relative;
+  line-height: 18px;
+  margin: 5px 0;
+  font-size: 14px;
+  -webkit-appearance: none;
+  font-family: 'Mukta Malar';
+  transition: all .6s ease;
+  cursor: pointer;
+  color: #fff;
+}
+.search input + div {
+  position: relative;
+  height: 28px;
+  width: 100%;
+  margin: -28px 0 0 0;
+}
+.search input + div svg {
+  display: block;
+  position: absolute;
+  height: 28px;
+  width: 160px;
+  right: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  stroke-dashoffset: 271.908;
+  stroke-dasharray: 59 212.908;
+  transition: all .6s ease;
+}
+.search input:not(:placeholder-shown), .search input:focus {
+  width: 160px;
+  padding: 0 4px;
+  cursor: text;
+}
+.search input:not(:placeholder-shown) + div svg, .search input:focus + div svg {
+  stroke-dasharray: 150 212.908;
+  stroke-dashoffset: 300;
+}
+
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* cart page */
@@ -417,7 +479,7 @@ li.nav-item::after {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 .our-collections .collections .collection,
@@ -439,27 +501,28 @@ li.nav-item::after {
 .user .main .body .orders .product:hover {
     transform: scale(1.05);
 }
-.like{
+.more{
     position: absolute;
-    right: 10px;
     border-radius: 50px;
     padding: .2rem .5rem;
-    top: 10px;
-    font-size: 1.3rem;
-    color: #9E9E9E;
+    top: 5px;
+    font-size: 1rem;
+    color: #0a0a1a;
+    opacity: 0;
+    right: -10px;
     transition: 500ms ease;
 }
-.recommend-div .recommended .recommend:hover .like,
-.our-collections .collections .collection:hover .like,
-.collection-div .collections .collection:hover .like,
-.rated-div .rateded .rated:hover .like,
-.added-div .just-added .added:hover .like,
-.user .main .body .orders .product:hover .like{
-    box-shadow: 0 0 20px 20px #f9848670;
-    background: #fc868870;
-    color: #fe494c;
+.recommend-div .recommended .recommend:hover .more,
+.our-collections .collections .collection:hover .more,
+.collection-div .collections .collection:hover .more,
+.rated-div .rateded .rated:hover .more,
+.added-div .just-added .added:hover .more,
+.user .main .body .orders .product:hover .more{
+    /* color: #fe494c; */
+    opacity: 1;
+    right: 5px;
 }
-.like i:hover{
+.more i:hover{
     transform: scale(0.95);
     color: #fe494c;
 }

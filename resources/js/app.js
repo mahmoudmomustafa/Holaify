@@ -14,13 +14,15 @@ new Vue({
         // init wow
         new WOW().init();
         // fixed nav scroll
-        $(window).scroll(function () {
-            if ($(window).scrollTop() >= 5) {
-                $(".navbar").addClass('nav-top');
-            } else {
-                $(".navbar").removeClass('nav-top');
-            }
-        });
+        // $(window).scroll(function () {
+        //     if ($(window).scrollTop() >= 5) {
+        //         $(".navbar").addClass('nav-top');
+        //     } else {
+        //         $(".navbar").removeClass('nav-top');
+        //     }
+        // });
+        // tooltip bootstrap
+        $('[data-toggle="tooltip"]').tooltip();
     },
     data() {
         return {
