@@ -22,15 +22,15 @@
     <div class="search w-100 py-3">
       {{-- sort --}}
       <div class="dropdown">
-          <button class="text-sm text-gray-700 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Sort
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-          </div>
+        <button class="text-sm text-gray-700 dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sort
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
         </div>
+      </div>
       {{-- view --}}
       @include('layouts.dashboard.grid')
       {{-- search --}}
@@ -71,7 +71,7 @@
           <th scope="col">Customer</th>
           <th scope="col">Order Code</th>
           <th scope="col">address</th>
-          <th scope="col">State</th>
+          <th scope="col" width="50">State</th>
           <th></th>
         </tr>
       </thead>
@@ -83,10 +83,10 @@
           <td>513239a9</td>
           <td>41st.</td>
           <td>
-            <select class="form-control state">
-              <option class="deliverd" selected>Deliverd</option>
-              <option class="ongoing">OnGoing</option>
-              <option class="canceled">Canceled</option>
+            <select data-menu class="select-menu">
+              <option selected>Deliverd</option>
+              <option>OnGoing</option>
+              <option >Canceled</option>
             </select>
           </td>
           <td>
@@ -104,4 +104,68 @@
     </table>
   </div>
 </div>
+@endsection
+@section('script')
+<script>
+  $('select[data-menu]').each(function() {
+let select = $(this),
+    options = select.find('option'),
+    menu = $('<div />').addClass('select-menu'),
+    button = $('<div />').addClass('button'),
+    list = $('<ul />'),
+    arrow = $('<em />').prependTo(button);
+
+options.each(function(i) {
+    let option = $(this);
+    list.append($('<li />').text(option.text()));
+});
+
+menu.css('--t', select.find(':selected').index() * -41 + 'px');
+
+select.wrap(menu);
+
+button.append(list).insertAfter(select);
+
+list.clone().insertAfter(button);
+
+});
+
+$(document).on('click', '.select-menu', function(e) {
+
+let menu = $(this);
+
+if(!menu.hasClass('open')) {
+    menu.addClass('open');
+}
+
+});
+
+$(document).on('click', '.select-menu > ul > li', function(e) {
+
+let li = $(this),
+    menu = li.parent().parent(),
+    select = menu.children('select'),
+    selected = select.find('option:selected'),
+    index = li.index();
+
+menu.css('--t', index * -41 + 'px');
+selected.attr('selected', false);
+select.find('option').eq(index).attr('selected', true);
+
+menu.addClass(index > selected.index() ? 'tilt-down' : 'tilt-up');
+
+setTimeout(() => {
+    menu.removeClass('open tilt-up tilt-down');
+}, 500);
+
+});
+
+$(document).click(e => {
+e.stopPropagation();
+if($('.select-menu').has(e.target).length === 0) {
+    $('.select-menu').removeClass('open');
+}
+})
+
+</script>
 @endsection

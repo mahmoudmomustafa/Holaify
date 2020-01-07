@@ -14,7 +14,7 @@
           <div class="d-flex justify-between">
             <div class="product-title pb-1">Product title</div>
             <div class="text-lg p-1">
-                <i class="far fa-heart"></i>
+              <i class="far fa-heart"></i>
             </div>
           </div>
           <div class="product-price pb-1 mb-2">EGP 10.00</div>
@@ -43,8 +43,20 @@
             <span class="tag"><a href="/tags"> #Tag</a></span>
             <span class="tag"><a href="/tags"> #Tag</a></span>
           </div>
-          <div class="add-to-cart py-3 px-2">
-            <button class="btn btn-primary">Add to Cart <i class="lni-cart"></i></button>
+          {{-- add to cart --}}
+          <div class="py-3 px-2">
+            {{-- <button class="btn btn-primary">Add to Cart <i class="lni-cart"></i></button> --}}
+            <button class="add-to-cart">
+              <div class="default">Add to cart</div>
+              <div class="success">Added</div>
+              <div class="cart">
+                <div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="dots"></div>
+            </button>
           </div>
         </div>
       </div>
@@ -143,4 +155,13 @@
     </div>
   </div>
 </div>
+@endsection
+@section('script')
+<script>
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', e => {
+        button.classList.toggle('added');
+    });
+});
+</script>
 @endsection

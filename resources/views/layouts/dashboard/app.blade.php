@@ -95,7 +95,7 @@
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <script src="/js/tags.js"></script>
     <script src="/js/app.js"></script>
-    {{-- @yield('script') --}}
+    @yield('script')
     <script>
         // check if file select
     function readURL(input) {

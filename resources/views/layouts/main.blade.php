@@ -21,8 +21,8 @@
 <body>
   <div id="app">
     {{-- navbar --}}
-    <nav class="navbar navbar-expand-md shadow-sm py-1">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-md py-1">
+      <div class="container">
         {{-- nav brand --}}
         <a class="navbar-brand" href="{{ url('/') }}">
           <span>{{ config('app.name', 'Holaify') }}</span>
@@ -36,7 +36,7 @@
           <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
             <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle="modal" data-target="#searchModel" v-pre>
+              <a class="nav-link" href="#" v-pre>
                 <div class="search">
                   <input type="text" placeholder=" ">
                   <div>
