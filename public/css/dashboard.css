@@ -11,44 +11,59 @@ body {
 
 /* navbar */
 .navbar {
-    background: #222B3A;
-    color: white;
+    background: white;
+    /* color: white; */
     font-family: 'Philosopher', sans-serif;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    z-index: 2;
+    /* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
 }
 
 .navbar-brand {
     font-family: 'Righteous', cursive;
-    display: flex;
+    /* display: flex; */
     transition: 500ms ease;
-    align-items: center;
+    /* align-items: center; */
+    margin-left: 5px;
 }
-
+.navbar-toggler{
+    display: block !important;
+}
 .navbar .navbar-brand span {
     /* font-size: medium; */
-    color: white;
+    color: #222B3A;
 
 }
 
-.navbar-brand:hover {
+/* .navbar-brand:hover {
     color: white;
     transform: translate(10px)
-}
+} */
 
 .navbar .nav-link {
-    color: #DFDBE5;
+    color: #222b3a;
+    padding: .4rem .8rem;
+    font-size: 20px;
 }
-
-.navbar .nav-link:hover {
-    color: #DFDBE5;
+.navbar .nav-link::after{
+content: none;
 }
-
 .navbar-expand-md .navbar-nav .dropdown-menu {
     border: 0;
-    box-shadow: 0 0 8px #8080809e;
-    position: absolute !important;
+    box-shadow: 0 0 8px #9494944d;
+    border-radius: 2px;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
 }
-
+.dropdown-menu.dropdown-menu-right.notification-menu.show {
+    padding: 0;
+    width: 350px;
+}
+.notification-menu .dropdown-item-text{
+    padding: .5rem 1rem;
+}
+.notification-menu .dropdown-item{
+    border-radius: 0 !important;
+}
 .navbar-expand-md .navbar-nav .dropdown-men::after {
     content: "";
     position: absolute;
@@ -92,6 +107,9 @@ body {
         height: max-content;
         box-shadow: 0 0 5px #80808075;
         border-radius: 4px;
+    }
+    .notification-menu.show {
+        width: 100px !important;
     }
 }
 
@@ -702,7 +720,7 @@ input.amsify-suggestags-input {
 
 
   .navbar-toggler {
-    --color: #fff;
+    --color: #222B3A;
     width: 36px;
     height: 36px;
     padding: 0;
@@ -717,12 +735,12 @@ input.amsify-suggestags-input {
     -webkit-tap-highlight-color: transparent;
   }
   .navbar-toggler svg {
-    width: 55px;
+    width: 40px;
     height: 40px;
-    top: -2px;
-    left: -14px;
+    top: 0px;
+    left: 0px;
     stroke: var(--color);
-    stroke-width: 3px;
+    stroke-width: 4px;
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
