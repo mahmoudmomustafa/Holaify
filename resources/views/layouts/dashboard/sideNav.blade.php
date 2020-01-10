@@ -1,10 +1,14 @@
 <nav id="navbarSupportedContent2" class="collapse wow slideInLeft" data-wow-duration="2s" data-wow-delay="0s">
-  
+  {{-- list --}}
   <ul class="nav nav-tabs py-3">
     <div class="container">
       {{-- overview --}}
       <li class="nav-item">
         <a class="nav-link" href="/auth"><i class="fas fa-chart-pie"></i> Overview</a>
+      </li>
+      {{-- activity --}}
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/activity"><i class="lni-bolt"></i> Activity</a>
       </li>
       {{-- orders --}}
       <li class="nav-item">
@@ -45,7 +49,7 @@
       {{-- setting --}}
       <li class="nav-item">
         <a class="nav-link" href="/auth/settings">
-          <i class="fas fa-cog"></i>
+          <i class="lni-cog"></i>
           Settings</a>
       </li>
     </div>

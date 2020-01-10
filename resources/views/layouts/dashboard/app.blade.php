@@ -9,7 +9,8 @@
     <title>Holaify - @yield('title')</title>
     <!-- Styles -->
     {{-- <link rel="stylesheet" href="/css/bootstrap.min.css"> --}}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/animate.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css">
@@ -27,8 +28,11 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
-                    {{-- <i class="fas fa-stream"></i> --}}
-                    <i class="lni-text-align-left"></i>
+                        <svg viewBox="0 0 64 48">
+                            <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
+                            <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
+                            <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
+                        </svg>
                 </button>
                 {{-- nav brand --}}
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -44,6 +48,18 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell"></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/">
+                                    <i class="fas fa-globe pr-2"></i> {{ __('Site') }}
+                                </a>
+                            </div>
+                        </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -89,7 +105,9 @@
     </div>
     {{-- script files --}}
     <script src="/js/jq.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
@@ -97,7 +115,7 @@
     <script src="/js/app.js"></script>
     @yield('script')
     <script>
-        // check if file select
+    // check if file select
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -116,6 +134,11 @@
         $('.img').hide();
         $('#img-post').val('');
     });
+        document.querySelectorAll('.navbar-toggler').forEach(btn => {
+            btn.addEventListener('click', e => {
+                btn.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 

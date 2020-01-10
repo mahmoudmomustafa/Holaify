@@ -66,7 +66,7 @@
     {{-- top rated --}}
     <div class="rated-div section wow fadeIn " data-wow-duration="2s" data-wow-delay="1s">
         <div class="header">
-            Top Rated
+            <i class="lni-medall size-lg"></i> Top Rated
         </div>
         <div class="rateded my-2 body">
             {{--5 rated items --}}

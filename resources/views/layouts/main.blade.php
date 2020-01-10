@@ -40,18 +40,21 @@
                 <div class="search">
                   <input type="text" placeholder=" ">
                   <div>
-                      <svg>
-                          <use xlink:href="#path">
-                      </svg>
+                    <svg>
+                      <use xlink:href="#path">
+                    </svg>
                   </div>
-              </div>
+                </div>
               </a>
-              
-            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                 <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" id="path">
-                    <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
+                  <path
+                    d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562"
+                    transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)">
+                  </path>
                 </symbol>
-            </svg>
+              </svg>
             </li>
             {{-- cart --}}
             <li class="nav-item cart">
@@ -62,11 +65,11 @@
             </li>
             @guest
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+              <a class="nav-link" href="{{ route('login') }}">{{ __('Sign in') }}</a>
             </li>
             @if (Route::has('register'))
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            <li class="nav-item btn-register">
+              <a class="nav-link" href="{{ route('register') }}">{{ __('Get Started') }}</a>
             </li>
             @endif
             @else
@@ -128,7 +131,9 @@
   {{-- @include('componants.loading') --}}
   {{-- script files --}}
   <script src="/js/jq.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/wow.min.js"></script>
   <script src="/js/app.js"></script>

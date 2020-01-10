@@ -112,10 +112,8 @@ body {
         display: flex;
         transition: 500ms ease;
         font-family: 'Righteous', cursive;
-
-        &:hover {
-            color: initial;
-            transform: translate(10px)
+        &:hover{
+            color: inherit !important;
         }
     }
 
@@ -125,8 +123,6 @@ body {
         flex-direction: row;
 
         .nav-item {
-            // text-align: center;
-            // font-size: .9rem;
             margin: 0 .3rem;
             transition: 500ms ease;
             position: relative;
@@ -194,7 +190,7 @@ body {
                 padding: 4px 8px;
                 position: relative;
                 z-index: 10;
-
+                font-weight: 800;
                 .num {
                     position: absolute;
                     bottom: 5px;
@@ -234,10 +230,27 @@ body {
             }
         }
 
+        .register-btn {
+            padding: .1rem .9rem !important;
+            background: #fe494c !important;
+            color: white !important;
+            border-radius: 4px !important;
+        }
+
         .cart {
             font-size: 1.1rem;
         }
     }
+}
+
+.nav-top {
+    background: white !important;
+    color: #212121 !important;
+    transition: 500ms linear;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
 }
 
 // home page
