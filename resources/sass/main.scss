@@ -503,21 +503,40 @@ body {
             }
 
             .product-tags {
-                .tag {
-                    font-size: small;
-                    background: $MainColor;
-                    color: white;
-                    padding: .3rem .5rem;
-                    border-radius: 3px;
-                    margin: 3px;
-                    transition: 500ms ease;
+                .tags {
+                    display: flex;
 
-                    &:hover {
-                        transform: scale(1.09);
+                    .tag {
+                        background: $MainColor;
+                        color: white;
+                        width: max-content;
+                        display: flex;
+                        border-radius: 45px;
+                        margin: 3px;
+                        align-items: center;
+                        transition: 500ms ease;
 
                         a {
+                            span {
+                                color: #fe494c;
+                                background: white;
+                                border-radius: 70px;
+                                padding: .1rem .5rem;
+                                font-weight: 900;
+                                margin-right: 3px;
+                            }
+
                             color: white;
                             text-decoration: none;
+                            padding: 0;
+                            margin: 4px 10px 4px 4px;
+                            font-size: .9rem;
+
+                        }
+
+                        &:hover {
+                            transform: scale(1.09);
+
                         }
                     }
                 }
@@ -528,7 +547,6 @@ body {
                 --icon: var(--color);
                 --cart: #fff;
                 --dots: #fff;
-                --background: $MainColor;
                 --shadow: #{rgba(#00093D, .16)};
                 cursor: pointer;
                 position: relative;
@@ -544,7 +562,7 @@ body {
                 transform: scale(var(--s, .97));
                 box-shadow: 0 var(--s-y, 4px) var(--s-b, 12px) var(--shadow);
                 color: var(--color);
-                background: var(--background);
+                background: $MainColor;
                 transition: transform .3s, box-shadow .3s;
 
                 .default {
@@ -812,68 +830,73 @@ body {
 
         .heading {
             font-weight: 600;
-            font-size: calc(1vw + 10px);
+            font-size: calc(1vw + 15px);
+        }
 
-            .review {
-                .yours {
-                    label {
-                        font-size: 2rem;
+        .review {
+            .yours {
+                label {
+                    font-size: 2rem;
 
-                        &:checked {
-                            color: yellow;
-                        }
-                    }
-
-                    .total {
-                        font-weight: 700;
-                        font-size: calc(0vw + 15px);
-                        padding: 2px;
+                    &:checked {
+                        color: yellow;
                     }
                 }
 
-                .others {
-                    .div {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: center;
-                        transition: 500ms ease;
-                        padding: .5rem;
-                        margin: .3rem;
-                        border: 0;
+                .total {
+                    font-weight: 700;
+                    font-size: calc(0vw + 15px);
+                    padding: 2px;
+                }
+            }
 
-                        .left {
-                            .rate {
-                                display: flex;
-                                flex-direction: column;
-                                flex-wrap: wrap;
+            .others {
+                .div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    transition: 500ms ease;
+                    padding: .5rem;
+                    margin: .3rem;
+                    border: 0;
 
-                                label {
-                                    margin: 0;
-                                    font-size: smaller;
-                                }
-                            }
-                        }
+                    .left {
+                        .rate {
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
 
-                        .right {
-                            span {
+                            label {
+                                margin: 0;
                                 font-size: smaller;
-                                font-weight: 600;
-                                padding: .5rem;
                             }
                         }
                     }
 
-                    .text-center {
-                        color: rgb(88, 88, 88);
-                        font-size: smaller;
+                    .right {
+                        span {
+                            font-size: smaller;
+                            font-weight: 600;
+                            padding: .5rem;
+                        }
                     }
+                }
+
+                .text-center {
+                    color: rgb(88, 88, 88);
+                    font-size: smaller;
                 }
             }
         }
     }
 
     .product-similar {
+        .heading {
+            font-weight: 700;
+            font-size: calc(0vw + 15px);
+        }
+
         height: max-content;
 
         .items {
@@ -886,14 +909,17 @@ body {
             li {
                 margin: 2px;
                 transition: 500ms ease;
+                box-shadow: 0 0 20px #80808052;
+                border-radius: 3px;
 
                 &:hover {
-                    transform: scale(1.02);
+                    transform: scale(1.03);
                 }
 
                 .price {
                     font-size: smaller;
-                    padding: 4px;
+                    padding: 5px;
+                    font-weight: 600;
                 }
             }
         }
@@ -904,6 +930,10 @@ body {
 footer {
     background: $MainColor;
     color: white;
+
+    .links {
+        flex-wrap: wrap;
+    }
 
     .footer-link {
         transition: 500ms ease;

@@ -37,11 +37,12 @@
             <span>Mobile</span>
           </div>
           <div class="product-tags p-2">
-            <div class="header">Tags :</div>
-            <span class="tag"><a href="/tags"> #Tag</a></span>
-            <span class="tag"><a href="/tags"> #Tag</a></span>
-            <span class="tag"><a href="/tags"> #Tag</a></span>
-            <span class="tag"><a href="/tags"> #Tag</a></span>
+            <div class="tags">
+              <span class="tag"><a href="/tags"> <span>#</span>Tag</a></span>
+              <span class="tag"><a href="/tags"> <span>#</span>Tag</a></span>
+              <span class="tag"><a href="/tags"> <span>#</span>Tag</a></span>
+              <span class="tag"><a href="/tags"> <span>#</span>Tag</a></span>
+            </div>
           </div>
           {{-- add to cart --}}
           <div class="py-3 px-2">
@@ -130,7 +131,7 @@
         </div>
       </div>
       <div class="product-similar m-1">
-        <div class="heading p-3">
+        <div class="heading pt-3 px-3">
           Similiar Items :
         </div>
         <ul class="items">

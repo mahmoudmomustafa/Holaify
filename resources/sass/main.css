@@ -547,25 +547,50 @@ body {
   white-space: nowrap;
 }
 
-.product-div .product-info .info .product-tags .tag {
-  font-size: small;
+.product-div .product-info .info .product-tags .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-div .product-info .info .product-tags .tags .tag {
   background: #fe494c;
   color: white;
-  padding: .3rem .5rem;
-  border-radius: 3px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 45px;
   margin: 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: 500ms ease;
   transition: 500ms ease;
 }
 
-.product-div .product-info .info .product-tags .tag:hover {
-  -webkit-transform: scale(1.09);
-          transform: scale(1.09);
-}
-
-.product-div .product-info .info .product-tags .tag:hover a {
+.product-div .product-info .info .product-tags .tags .tag a {
   color: white;
   text-decoration: none;
+  padding: 0;
+  margin: 4px 10px 4px 4px;
+  font-size: .9rem;
+}
+
+.product-div .product-info .info .product-tags .tags .tag a span {
+  color: #fe494c;
+  background: white;
+  border-radius: 70px;
+  padding: .1rem .5rem;
+  font-weight: 900;
+  margin-right: 3px;
+}
+
+.product-div .product-info .info .product-tags .tags .tag:hover {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
 }
 
 .product-div .product-info .info .add-to-cart {
@@ -573,7 +598,6 @@ body {
   --icon: var(--color);
   --cart: #fff;
   --dots: #fff;
-  --background: $MainColor;
   --shadow: rgba(0, 9, 61, 0.16);
   cursor: pointer;
   position: relative;
@@ -591,7 +615,7 @@ body {
   -webkit-box-shadow: 0 var(--s-y, 4px) var(--s-b, 12px) var(--shadow);
           box-shadow: 0 var(--s-y, 4px) var(--s-b, 12px) var(--shadow);
   color: var(--color);
-  background: var(--background);
+  background: #fe494c;
   -webkit-transition: -webkit-transform .3s, -webkit-box-shadow .3s;
   transition: -webkit-transform .3s, -webkit-box-shadow .3s;
   transition: transform .3s, box-shadow .3s;
@@ -932,24 +956,24 @@ body {
 
 .product-div .product-reviews .heading {
   font-weight: 600;
-  font-size: calc(1vw + 10px);
+  font-size: calc(1vw + 15px);
 }
 
-.product-div .product-reviews .heading .review .yours label {
+.product-div .product-reviews .review .yours label {
   font-size: 2rem;
 }
 
-.product-div .product-reviews .heading .review .yours label:checked {
+.product-div .product-reviews .review .yours label:checked {
   color: yellow;
 }
 
-.product-div .product-reviews .heading .review .yours .total {
+.product-div .product-reviews .review .yours .total {
   font-weight: 700;
   font-size: calc(0vw + 15px);
   padding: 2px;
 }
 
-.product-div .product-reviews .heading .review .others .div {
+.product-div .product-reviews .review .others .div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -970,7 +994,7 @@ body {
   border: 0;
 }
 
-.product-div .product-reviews .heading .review .others .div .left .rate {
+.product-div .product-reviews .review .others .div .left .rate {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -982,18 +1006,18 @@ body {
       flex-wrap: wrap;
 }
 
-.product-div .product-reviews .heading .review .others .div .left .rate label {
+.product-div .product-reviews .review .others .div .left .rate label {
   margin: 0;
   font-size: smaller;
 }
 
-.product-div .product-reviews .heading .review .others .div .right span {
+.product-div .product-reviews .review .others .div .right span {
   font-size: smaller;
   font-weight: 600;
   padding: .5rem;
 }
 
-.product-div .product-reviews .heading .review .others .text-center {
+.product-div .product-reviews .review .others .text-center {
   color: #585858;
   font-size: smaller;
 }
@@ -1002,6 +1026,11 @@ body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+}
+
+.product-div .product-similar .heading {
+  font-weight: 700;
+  font-size: calc(0vw + 15px);
 }
 
 .product-div .product-similar .items {
@@ -1023,21 +1052,30 @@ body {
   margin: 2px;
   -webkit-transition: 500ms ease;
   transition: 500ms ease;
+  -webkit-box-shadow: 0 0 20px #80808052;
+          box-shadow: 0 0 20px #80808052;
+  border-radius: 3px;
 }
 
 .product-div .product-similar .items li:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .product-div .product-similar .items li .price {
   font-size: smaller;
-  padding: 4px;
+  padding: 5px;
+  font-weight: 600;
 }
 
 footer {
   background: #fe494c;
   color: white;
+}
+
+footer .links {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer .footer-link {
