@@ -120,7 +120,7 @@
     {{-- footer --}}
     <footer>
       <div class="p-5">
-        <div class="links d-flex flex-row p-1">
+        <div class="links d-flex flex-row">
             <a class="px-2 footer-link" href="{{ route('register') }}">{{ __('Get Started') }}</a>
             <a class="px-2 footer-link" href="{{ route('register') }}">{{ __('Subscribe') }}</a>
             <p class="px-2">Have an account ? 
@@ -128,8 +128,7 @@
             </p>
         </div>
         <div class="footer p-2">
-          <div class="text-sm">© 2019 Holaify.com</div>
-          <div class="text-base">Holaify developed by <span class="font-bold">M3</span></div>
+          <div class="text-sm">© 2019 Holaify.com developed by <span class="font-bold">M3</span></div>
         </div>
       </div>
     </footer>
