@@ -1,10 +1,10 @@
-<nav id="navbarSupportedContent2" class="collapse wow slideInLeft" data-wow-duration="2s" data-wow-delay="0s">
+<nav id="navbarSupportedContent2" class="collapse wow slideInLeft shadow" data-wow-duration="1s" data-wow-delay="0s">
   {{-- list --}}
   <ul class="nav nav-tabs py-3">
     <div class="container">
       {{-- overview --}}
       <li class="nav-item">
-        <a class="nav-link" href="/auth"><i class="fas fa-chart-pie"></i> Overview</a>
+        <a class="nav-link" href="/auth"><i class="lni-pulse"></i> Overview</a>
       </li>
       {{-- activity --}}
       <li class="nav-item">
@@ -36,10 +36,10 @@
           </div>
         </div>
       </li>
-      {{-- customers --}}
+      {{-- Clients --}}
       <li class="nav-item">
-        <a class="nav-link" href="/auth/customers"><i class="fas fa-user-friends"></i>
-          Customers</a>
+        <a class="nav-link" href="/auth/clients"><i class="lni-users size-sm"></i>
+          Clients</a>
       </li>
       {{-- admins --}}
       <li class="nav-item">

@@ -92,12 +92,12 @@ Route::get('/auth/admins/show', function () {
 }); // show admin info.
 
 //customers
-Route::get('/auth/customers', function () {
+Route::get('/auth/clients', function () {
     return view('dashboard.users.customers.main');
-})->name('customers'); // all customers table
-Route::get('/auth/customers/create', function () {
+})->name('Clients'); // all customers table
+Route::get('/auth/clients/create', function () {
     return view('dashboard.users.customers.create');
 }); //create new customers
-Route::get('/auth/customers/show', function () {
+Route::get('/auth/clients/show', function () {
     return view('dashboard.users.customers.show');
 }); // show customers info.

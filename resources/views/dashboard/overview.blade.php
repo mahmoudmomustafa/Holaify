@@ -6,8 +6,8 @@
     {{-- head --}}
     <div class="head">
         <div class="py-2">
-            {{-- <h3>Welcome,{{Auth::user()->name}}</h3> --}}
-            <h3>Welcome, Mahmoud</h3>
+            {{-- <h3>Hola,{{Auth::user()->name}}</h3> --}}
+            <h3>Hola, Mahmoud</h3>
         </div>
         <div class="add">
             <div class="dropdown">

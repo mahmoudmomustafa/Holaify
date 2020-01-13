@@ -23,11 +23,11 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md shadow-sm">
+        <nav class="navbar navbar-expand-md shadow-sm py-1">
             <div class="container-fluid">
                 <div class="d-flex">
-                    <button class="navbar-toggler" type="button"
-                        aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"  aria-expanded="false"
+                        aria-label="{{ __('Toggle navigation') }}">
                         <svg viewBox="0 0 64 48">
                             <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
                             <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
@@ -37,7 +37,8 @@
                     {{-- nav brand --}}
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <span class="wow fadeInLeft" data-wow-duration="1s"
-                            data-wow-delay="1s">{{ config('app.name', 'Holaify') }} <span style="font-size: xx-small;">Dashboard</span> </span>
+                            data-wow-delay="1s">{{ config('app.name', 'Holaify') }} <span
+                                style="font-size: xx-small;">Dashboard</span> </span>
                     </a>
                 </div>
                 <div class="navs">
@@ -50,25 +51,27 @@
                         <li class="nav-item dropdown px-2">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle notification" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell"></i>
+                                <i class="far fa-bell"></i>
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right notification-menu pb-2" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-right notification-menu pb-2"
+                                aria-labelledby="navbarDropdown">
                                 <span class="dropdown-item-text">Activity</span>
                                 <a class="dropdown-item title text-sm" href="/">
                                     Mahmoud Added 'Bla bla' to his wishlist
                                 </a>
                                 {{-- all activity --}}
-                                <a class="dropdown-item text-center text-xs" href="/">
+                                <a class="d-block w-100 text-center text-xs pt-2" href="/">
                                     {{ __('See all activity') }}
                                 </a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle d-flex" href="#" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="align-items:center;">
-                                <img src="/img/default-user.svg" width="30"
-                                    style="border-radius:50%"> <span class="text-sm ml-2">Mahmoud</span>
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre
+                                style="align-items:center;">
+                                <img src="/img/default-user.svg" width="25" style="border-radius:50%"> <span
+                                    class="text-sm ml-2 admin-name">Mahmoud</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/">
@@ -116,7 +119,7 @@
     <script src="/js/app.js"></script>
     @yield('script')
     <script>
-    // check if file select
+        // check if file select
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
