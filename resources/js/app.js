@@ -7,8 +7,8 @@ new Vue({
     el: '#app',
     components: {
         "dash-head": dashboardHeader,
-        "order-chart":orderChart,
-        "sales-chart":salesChart
+        "order-chart": orderChart,
+        "sales-chart": salesChart
     },
     created() {
         $('[data-toggle="tooltip"]').tooltip();

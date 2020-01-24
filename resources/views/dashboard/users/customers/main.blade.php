@@ -9,23 +9,38 @@
     {{-- search --}}
     <div class="search w-100 py-3">
       {{-- sort --}}
-      <div class="dropdown">
-          <button class="text-sm text-gray-700 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Sort
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-          </div>
+      <div class="dropdown filter">
+        <button class="text-sm text-gray-700 dropdown-toggle" type="button" id="filter_menu"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="lni-funnel" data-toggle="tooltip"
+          data-placement="right" title="Filter"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
         </div>
-      {{-- view--}}
+      </div>
+      {{-- view --}}
       @include('layouts.dashboard.grid')
+      {{-- more settings --}}
+      <div class="dropdown more_settings mr-2">
+        <button class="text-sm text-gray-700 dropdown-toggle" type="button" id="more_settings"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="lni-cog" data-toggle="tooltip"
+          data-placement="left" title="Settings"></i>
+        </button>
+        <div class="dropdown-menu py-1" aria-labelledby="more_settings">
+          <a class="dropdown-item" href="#"><i class="lni-cloud-upload"></i><span>Import</span></a>
+          <a class="dropdown-item" href="#"><i class="lni-exit-down"></i><span>Export</span></a>
+          <div class="dropdown-divider my-1"></div>
+          <a class="dropdown-item" href="#"><i class="lni-circle-minus"></i><span>Erase Data</span></a>
+        </div>
+      </div>
       {{-- search --}}
       <div class="form-group mb-0">
-        <div class="position-relative p-0">
+        <div class="p-0 position-relative">
           <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
-          <input id="search" type="text" class="form-control search-input" name="search" placeholder="Filter Customers">
+          <input id="search" type="text" class="form-control search-input" name="search" placeholder="Search for Order">
         </div>
       </div>
     </div>
