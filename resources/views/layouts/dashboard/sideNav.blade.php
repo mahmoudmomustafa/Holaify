@@ -1,4 +1,4 @@
-<nav id="navbarSupportedContent2" class="collapse wow slideInLeft shadow" data-wow-duration="1s" data-wow-delay="0s">
+<nav id="navbarSupportedContent2" class="collapse wow fadeIn shadow" data-wow-duration="0s" data-wow-delay="0s">
   {{-- list --}}
   <ul class="nav nav-tabs py-3">
     <div class="container">

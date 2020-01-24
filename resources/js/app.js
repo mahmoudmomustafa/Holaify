@@ -11,6 +11,7 @@ new Vue({
         "sales-chart":salesChart
     },
     created() {
+        $('[data-toggle="tooltip"]').tooltip();
         // init wow
         new WOW().init();
         // fixed nav scroll
@@ -24,7 +25,6 @@ new Vue({
             }
         });
         // tooltip bootstrap
-        $('[data-toggle="tooltip"]').tooltip();
     },
     data() {
         return {

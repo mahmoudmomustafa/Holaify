@@ -3,7 +3,7 @@
 @section('content')
 <div class="content">
   {{-- header --}}
-  <dash-head title="Admins" link="/auth/admins/create" add="Add Admin"></dash-head>
+  <dash-head title="Admins" link="/auth/admins/create" add="New Admin"></dash-head>
   {{-- content --}}
   <div class="main">
     {{-- search --}}

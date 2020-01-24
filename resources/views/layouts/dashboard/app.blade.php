@@ -23,10 +23,12 @@
 
 <body>
     <div id="app">
+        {{-- top nav --}}
         <nav class="navbar navbar-expand-md shadow-sm py-1">
             <div class="container-fluid">
                 <div class="d-flex">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"  aria-expanded="false"
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent2" aria-expanded="false"
                         aria-label="{{ __('Toggle navigation') }}">
                         <svg viewBox="0 0 64 48">
                             <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
@@ -35,7 +37,7 @@
                         </svg>
                     </button>
                     {{-- nav brand --}}
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/auth') }}">
                         <span class="wow fadeInLeft" data-wow-duration="1s"
                             data-wow-delay="1s">{{ config('app.name', 'Holaify') }} <span
                                 style="font-size: xx-small;">Dashboard</span> </span>
@@ -47,21 +49,21 @@
                     </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto d-flex flex-row align-center">
-                        <!-- Authentication Links -->
+                        {{-- notifications --}}
                         <li class="nav-item dropdown px-2">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle notification" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="far fa-bell"></i>
                             </a>
-
                             <div class="dropdown-menu dropdown-menu-right notification-menu pb-2"
                                 aria-labelledby="navbarDropdown">
                                 <span class="dropdown-item-text">Activity</span>
                                 <a class="dropdown-item title text-sm" href="/">
                                     Mahmoud Added 'Bla bla' to his wishlist
                                 </a>
+                                <div class="dropdown-divider"></div>
                                 {{-- all activity --}}
-                                <a class="d-block w-100 text-center text-xs pt-2" href="/">
+                                <a class="d-block w-100 text-center text-xs" href="/">
                                     {{ __('See all activity') }}
                                 </a>
                             </div>
@@ -83,7 +85,7 @@
                                 </a>
                                 {{-- logout --}}
                                 <a class="dropdown-item" href="" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                         document.getElementById('logout-form').submit();">
                                     <i class="fas fa-sign-out-alt pr-2"></i> {{ __('Logout') }}
                                 </a>
                                 {{-- {{ route('logout') }} --}}
@@ -96,11 +98,12 @@
                 </div>
             </div>
         </nav>
-        <div class="mains">
+        {{-- content --}}
+        <div class="main-content wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
             {{-- sideNav --}}
             @include('layouts.dashboard.sideNav')
-            {{-- content --}}
-            <div class="main-content p-3 wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
+            {{-- main --}}
+            <div class="mains py-2">
                 <div class="container">
                     @yield('content')
                 </div>
@@ -109,35 +112,38 @@
     </div>
     {{-- script files --}}
     <script src="/js/jq.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
     </script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/wow.min.js"></script>
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
     <script src="/js/tags.js"></script>
+    <script src="/js/jquery.nicescroll.min.js"></script>
     <script src="/js/app.js"></script>
     @yield('script')
     <script>
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $('body , .nav').niceScroll();
         // check if file select
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('#img').attr('src', e.target.result);
-                $('#prevImg').attr('src', e.target.result);
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#img').attr('src', e.target.result);
+                    $('#prevImg').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
             }
-            reader.readAsDataURL(input.files[0]);
         }
-    }
-    $("#img-post").change(function () {
-        $('.img').show();
-        readURL(this);
-    });
-    $('.close').click(function () {
-        $('.img').hide();
-        $('#img-post').val('');
-    });
+        $("#img-post").change(function () {
+            $('.img').show();
+            readURL(this);
+        });
+        $('.close').click(function () {
+            $('.img').hide();
+            $('#img-post').val('');
+        });
         document.querySelectorAll('.navbar-toggler').forEach(btn => {
             btn.addEventListener('click', e => {
                 btn.classList.toggle('active');

@@ -1,7 +1,7 @@
 @extends('layouts.dashboard.app')
 @section('title','Orders')
 @section('content')
-<div class="content">
+<div class="content py-2">
   {{-- header --}}
   <dash-head title="Orders"></dash-head>
   {{-- content --}}
@@ -21,10 +21,11 @@
     {{-- search --}}
     <div class="search w-100 py-3">
       {{-- sort --}}
-      <div class="dropdown">
-        <button class="text-sm text-gray-700 dropdown-toggle" type="button" id="dropdownMenuButton"
+      <div class="dropdown filter">
+        <button class="text-sm text-gray-700 dropdown-toggle" type="button" id="filter_menu"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Sort
+          <i class="lni-funnel" data-toggle="tooltip"
+          data-placement="right" title="Filter"></i>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#">Action</a>
@@ -33,17 +34,68 @@
       </div>
       {{-- view --}}
       @include('layouts.dashboard.grid')
+      {{-- more settings --}}
+      <div class="dropdown more_settings mr-2">
+        <button class="text-sm text-gray-700 dropdown-toggle" type="button" id="more_settings"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="lni-cog" data-toggle="tooltip"
+          data-placement="left" title="Settings"></i>
+        </button>
+        <div class="dropdown-menu py-1" aria-labelledby="more_settings">
+          <a class="dropdown-item" href="#"><i class="lni-cloud-upload"></i><span>Import</span></a>
+          <a class="dropdown-item" href="#"><i class="lni-exit-down"></i><span>Export</span></a>
+          <div class="dropdown-divider my-1"></div>
+          <a class="dropdown-item" href="#"><i class="lni-circle-minus"></i><span>Erase Data</span></a>
+        </div>
+      </div>
       {{-- search --}}
       <div class="form-group mb-0">
         <div class="p-0 position-relative">
           <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
-          <input id="search" type="text" class="form-control search-input" name="search" placeholder="Filter Orders">
+          <input id="search" type="text" class="form-control search-input" name="search" placeholder="Search for Order">
         </div>
       </div>
     </div>
     {{-- Orders in grid --}}
     <div class="row mx-0 my-2 justify-center" v-if="grid">
       <div class="w-48 bg-white rounded-lg py-3 px-4 order m-1">
+        <div class="w-100 d-flex justify-end position-relative">
+          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit" href="#">Edit</a>
+            <a class="dropdown-item delete" href="#">Delete</a>
+          </div>
+        </div>
+        <img class="h-16 w-16 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-sm mb-2 title">Order Code</div>
+            <div class="font-bold text-sm mb-2 title">41st. bla bla bla bla</div>
+            <div class="font-bold text-xs mb-2 title"><span class="deliverd">Deliverd</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-48 bg-white rounded-lg py-3 px-4 order m-1">
+        <div class="w-100 d-flex justify-end position-relative">
+          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit" href="#">Edit</a>
+            <a class="dropdown-item delete" href="#">Delete</a>
+          </div>
+        </div>
+        <img class="h-16 w-16 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-sm mb-2 title">Order Code</div>
+            <div class="font-bold text-sm mb-2 title">41st. bla bla bla bla</div>
+            <div class="font-bold text-xs mb-2 title"><span class="deliverd">Deliverd</span></div>
+          </div>
+        </div>
+      </div><div class="w-48 bg-white rounded-lg py-3 px-4 order m-1">
         <div class="w-100 d-flex justify-end position-relative">
           <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false"></i>
@@ -84,15 +136,15 @@
           <td>41st.</td>
           <td>
             <select data-menu class="select-menu">
-              <option selected>Deliverd</option>
-              <option>OnGoing</option>
+              <option>Deliverd</option>
+              <option selected>OnGoing</option>
               <option >Canceled</option>
             </select>
           </td>
           <td>
-            <div class="w-100 d-flex justify-end position-relative">
-              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></i>
+            <div class="w-100 d-flex justify-center position-relative btn-group dropleft">
+              <i class="lni-cog cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"></i>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item edit" href="#">Edit</a>
                 <a class="dropdown-item delete" href="#">Delete</a>
