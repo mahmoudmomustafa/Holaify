@@ -3,18 +3,7 @@
 @section('content')
 <div class="content">
     {{-- head --}}
-    <div class="header p-2 pb-3">
-        <div class="head">
-            <h3>Product title..</h3>
-            {{-- <h3>{{$product->title}}..</h3> --}}
-        </div>
-        {{-- back to products --}}
-        <div class="add">
-            <a href="/auth/products">
-                Products
-            </a>
-        </div>
-    </div>
+    <show-head title="Product title" link="/auth/products" back="Products"></show-head>
     {{-- product --}}
     <div class="main px-4 py-3">
         {{-- edit && delete --}}

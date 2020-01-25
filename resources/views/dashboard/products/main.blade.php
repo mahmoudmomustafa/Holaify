@@ -75,8 +75,8 @@
             </div>
             <div class="w-100 d-flex justify-between position-relative">
               <div class="price font-bold text-sm mb-2">EGP 10.00</div>
-              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></i>
+              <i class="lni-cog cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"></i>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item edit" href="#">Edit</a>
                 <a class="dropdown-item delete" href="#">Delete</a>
@@ -143,8 +143,8 @@
           </td>
           <td>
             <div class="w-100 d-flex justify-end position-relative">
-              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></i>
+              <i class="lni-cog cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"></i>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item edit" href="#">Edit</a>
                 <a class="dropdown-item delete" href="#">Delete</a>

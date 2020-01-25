@@ -3,17 +3,7 @@
 @section('content')
 <div class="content">
   {{-- head --}}
-  <div class="header p-2 pb-3">
-    <div class="head">
-      <h3>Collection Name..</h3>
-    </div>
-    {{-- back to collections --}}
-    <div class="add">
-      <a class="" href="/auth/collections">
-        Collections
-      </a>
-    </div>
-  </div>
+  <show-head title="Collection title" link="/auth/collections" back="Collections"></show-head>
   {{-- content --}}
   <div class="main px-4 py-3">
     {{-- edit && delete --}}

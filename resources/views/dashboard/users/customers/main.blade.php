@@ -1,5 +1,5 @@
 @extends('layouts.dashboard.app')
-@section('title','Customers')
+@section('title','Clients')
 @section('content')
 <div class="content">
   {{-- header --}}
@@ -44,12 +44,12 @@
         </div>
       </div>
     </div>
-    {{-- view customers in grid --}}
+    {{-- view clients in grid --}}
     <div class="row mx-0 my-2 justify-center" v-if="grid">
       <div class="w-48 sm:w-56 bg-white rounded-lg py-3 px-4 customer m-1">
         <div class="w-100 d-flex justify-end position-relative">
-          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"></i>
+          <i class="lni-cog cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item edit" href="#">Edit</a>
             <a class="dropdown-item delete" href="#">Delete</a>
@@ -65,7 +65,7 @@
         </div>
       </div>
     </div>
-    {{-- view customer in table --}}
+    {{-- view clients in table --}}
     <table class="table table-hover" v-else>
       <thead>
         <tr>
@@ -96,8 +96,8 @@
           <td>LE 0.00 spent</td>
           <td>
             <div class="w-100 d-flex justify-end position-relative">
-              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></i>
+              <i class="lni-cog cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"></i>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item edit" href="#">Edit</a>
                 <a class="dropdown-item delete" href="#">Delete</a>

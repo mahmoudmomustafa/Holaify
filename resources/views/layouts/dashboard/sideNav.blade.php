@@ -30,21 +30,23 @@
         <div class="dropdown-ul">
           <div class="li">
             <a class="dropdown-li" href="/auth/products">All Products</a>
+            <a href="/auth/products/add"><i class="lni-plus"></i></a>
           </div>
           <div class="li">
             <a class="dropdown-li" href="/auth/collections">Collections</a>
+            <a href="/auth/collections/add"><i class="lni-plus"></i></a>
           </div>
         </div>
       </li>
       {{-- Clients --}}
       <li class="nav-item">
-        <a class="nav-link" href="/auth/clients"><i class="lni-users size-sm"></i>
-          Clients</a>
+        <a class="nav-link" href="/auth/clients"><i class="lni-users size-sm"></i>Clients</a>
+        <a href="/auth/clients/add"><i class="lni-plus"></i></a>
       </li>
       {{-- admins --}}
       <li class="nav-item">
-        <a class="nav-link" href="/auth/admins"><i class="fas fa-users-cog"></i>
-          Admins</a>
+        <a class="nav-link" href="/auth/admins"><i class="fas fa-users-cog"></i>Admins</a>
+        <a href="/auth/admins/add"><i class="lni-plus"></i></a>
       </li>
       {{-- setting --}}
       <li class="nav-item">

@@ -3,17 +3,7 @@
 @section('content')
 <div class="content">
     {{-- head --}}
-    <div class="header p-2 pb-3">
-        <div class="head">
-            <h3>Admin Name..</h3>
-        </div>
-        {{-- back to admins --}}
-        <div class="add">
-            <a href="/auth/admins">
-                Admins
-            </a>
-        </div>
-    </div>
+    <show-head title="Admin Name" link="/auth/admins" back="Admins"></show-head>
     {{-- content --}}
     <div class="main p-3">
         {{-- edit && delete --}}

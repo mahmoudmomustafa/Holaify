@@ -60,56 +60,8 @@
     <div class="row mx-0 my-2 justify-around" v-if="grid">
       <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
         <div class="w-100 d-flex justify-end position-relative">
-          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"></i>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item edit" href="#">Edit</a>
-            <a class="dropdown-item delete" href="#">Delete</a>
-          </div>
-        </div>
-        <div class="text-center">
-          <div class="font-bold text-xl mb-2 title w-100">Collection Name</div>
-          <div class="d-flex flex-column">
-            <div class="font-bold text-sm mb-2 title">4 Products</div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
-        <div class="w-100 d-flex justify-end position-relative">
-          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"></i>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item edit" href="#">Edit</a>
-            <a class="dropdown-item delete" href="#">Delete</a>
-          </div>
-        </div>
-        <div class="text-center">
-          <div class="font-bold text-xl mb-2 title w-100">Collection Name</div>
-          <div class="d-flex flex-column">
-            <div class="font-bold text-sm mb-2 title">4 Products</div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
-        <div class="w-100 d-flex justify-end position-relative">
-          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"></i>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item edit" href="#">Edit</a>
-            <a class="dropdown-item delete" href="#">Delete</a>
-          </div>
-        </div>
-        <div class="text-center">
-          <div class="font-bold text-xl mb-2 title w-100">Collection Name</div>
-          <div class="d-flex flex-column">
-            <div class="font-bold text-sm mb-2 title">4 Products</div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
-        <div class="w-100 d-flex justify-end position-relative">
-          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"></i>
+          <i class="lni-cog cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item edit" href="#">Edit</a>
             <a class="dropdown-item delete" href="#">Delete</a>
@@ -144,8 +96,8 @@
           <td><a href="#">Phones</a></td>
           <td>3 Product</td>
           <td><div class="w-100 d-flex justify-end position-relative">
-              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false"></i>
+            <i class="lni-cog cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"></i>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item edit" href="#">Edit</a>
                 <a class="dropdown-item delete" href="#">Delete</a>

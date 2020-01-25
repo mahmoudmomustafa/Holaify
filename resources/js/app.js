@@ -1,5 +1,6 @@
 import './bootstrap'
 import dashboardHeader from "./components/dashboardHeader.vue"
+import showHeader from "./components/showHeading.vue"
 import orderChart from "./components/orderChart.vue"
 import salesChart from "./components/salesChart.vue"
 
@@ -7,8 +8,9 @@ new Vue({
     el: '#app',
     components: {
         "dash-head": dashboardHeader,
+        "show-head": showHeader,
         "order-chart": orderChart,
-        "sales-chart": salesChart
+        "sales-chart": salesChart,
     },
     created() {
         $('[data-toggle="tooltip"]').tooltip();

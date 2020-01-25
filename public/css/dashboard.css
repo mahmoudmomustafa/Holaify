@@ -185,7 +185,27 @@ body {
     color: #222b3a;
     text-decoration: none;
 }
-
+/* //clients profile */
+#client_tables .nav-tabs{
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    position: relative !important;
+}
+#client_tables .nav-tabs a,
+#client_tables .nav-tabs a:hover{
+    border: none !important;
+    margin-right: 5px;
+}
+#client_tables .nav-tabs a:hover{
+    background: #222b3a14 !important;
+}
+#client_tables .nav-tabs .active {
+    background: #222b3a14 !important;
+    border: 0 !important;
+    clip-path: circle(75%);
+    box-shadow: 0 0 5px #80808085;
+}
 /* main content */
 .main-content {
     width: 100%;

@@ -22,7 +22,7 @@ export default {
   ]
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .header {
     border-bottom: 1px solid #222b3a1a;
     overflow: auto;
